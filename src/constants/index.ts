@@ -31,11 +31,11 @@ export const navlinksdata: NavLink[] = [
     link: "resume",
   },
 
-  {
-    _id: 1005,
-    title: "Testmonial",
-    link: "testmonial",
-  },
+  // {
+  //   _id: 1005,
+  //   title: "Testmonial",
+  //   link: "testmonial",
+  // },
 
   {
     _id: 1006,

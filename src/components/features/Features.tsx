@@ -7,7 +7,7 @@ const Features = () => {
       id="features"
       className="w-full h-auto pt-10 pb-10 py-20 border-b border-black"
     >
-      <Title title="Features" des="What I Do" />
+      <Title title="Services" des="What I Do" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
         <div className="bg-[#202327] p-6 rounded-lg shadow-xl transform transition-transform duration-300 hover:translate-y-[-10px] hover:bg-[#1e2024]">
           <div className="text-4xl text-pink-500 mb-4">
