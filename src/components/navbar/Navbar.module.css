@@ -1,0 +1,61 @@
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add any additional global styles here
+
+Existing styles 
+.w-full {
+    width: 100%;
+}
+
+.h-auto {
+    height: auto;
+}
+
+Navbar.module.css
+.logo {
+    width: 40px;
+    height: auto;
+
+}
+Navbar.module.css
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(35, 33, 33);
+    color: white;
+    border: 70px;
+    position: sticky;
+    z-index: 1000;
+    position: -webkit-sticky;
+    
+
+}
+
+.navbar-items {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-items li {
+    margin-right: 10px;
+    
+}
+
+.navbar-items li:hover {
+    color: red;
+
+}
+
+h1{
+    color: white;
+} */
