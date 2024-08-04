@@ -7,8 +7,8 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="w-full h-[800px] pt-10 py-20 pb-20 flex items-center border-b-[1px] border-b-black"
-      style={{ marginLeft: "70px", marginRight: "60px" }}
+      className="w-full h-[800px] pt-10 flex items-center border-b-[1px] border-b-black"
+      style={{ marginLeft: "70px", marginRight: "60px", paddingTop: "5px" }} // Adjusted paddingTop to 5px
     >
       <LeftHome />
       <div className="w-1/2 flex justify-center items-center relative">
