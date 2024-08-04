@@ -8,7 +8,10 @@ import ProjectCard from "../projects/ProjectCard";
 
 const Project: React.FC = () => {
   return (
-    <section id="projects" className="w-full py-20 border-b-[1px] border-b-black">
+    <section
+      id="projects"
+      className="w-full py-20 border-b-[1px] border-b-black"
+    >
       <div className="flex justify-center items-center text-center">
         <Title
           title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK"

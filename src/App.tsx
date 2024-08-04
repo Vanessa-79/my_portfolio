@@ -8,6 +8,7 @@ import Project from './components/projects/Project';
 import Resume from './components/resume/Resume';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import FooterBottom from './components/footer/FooterBottom';
 
 function setCookie(name: string, value: string, days:number) {
   let expires = "";
@@ -35,6 +36,7 @@ function App() {
         <Resume />
         <Contact />
         <Footer />
+        <FooterBottom />
       </div>
     </div>
   );

@@ -1,61 +1,32 @@
- @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Add any additional global styles here
-
-Existing styles 
-.w-full {
-    width: 100%;
+/* Navbar link styles */
+ul li a {
+    position: relative;
 }
 
-.h-auto {
-    height: auto;
+ul li a.active {
+    color: orange;
+    /* Color of the text for active link */
 }
 
-Navbar.module.css
-.logo {
-    width: 40px;
-    height: auto;
-
-}
-Navbar.module.css
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: rgb(35, 33, 33);
-    color: white;
-    border: 70px;
-    position: sticky;
-    z-index: 1000;
-    position: -webkit-sticky;
-    
-
+ul li a.active::before,
+ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: orange;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.navbar-items {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+ul li a.active::before {
+    top: 0;
+    /* Line above the text */
+    transform: scaleX(1);
 }
 
-.navbar-items li {
-    margin-right: 10px;
-    
+ul li a.active::after {
+    bottom: 0;
+    /* Line below the text */
+    transform: scaleX(1);
 }
-
-.navbar-items li:hover {
-    color: red;
-
-}
-
-h1{
-    color: white;
-} */

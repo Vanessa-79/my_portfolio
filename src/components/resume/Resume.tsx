@@ -17,10 +17,12 @@ const Resume = () => {
       <div className="flex justify-center items-center text-center">
         <Title title="MY EXPERIENCE" des="My Resume" />
       </div>
-      <div>
-        <ul className="w-full grid grid-cols-4">
+      <div className="mt-10 flex flex-col items-center">
+        <ul className="w-full flex justify-center items-center space-x-4 border-b-2 border-gray-600">
           <li
-            className={`${educationData ? "active" : ""} resumeli`}
+            className={`transition-colors duration-300 ${
+              educationData ? "active-tab" : "inactive-tab"
+            }`}
             onClick={() => {
               setEducationData(true);
               setSkillsData(false);
@@ -31,7 +33,9 @@ const Resume = () => {
             Education
           </li>
           <li
-            className={`${skillData ? "active" : ""} resumeli`}
+            className={`transition-colors duration-300 ${
+              skillData ? "active-tab" : "inactive-tab"
+            }`}
             onClick={() => {
               setEducationData(false);
               setSkillsData(true);
@@ -42,7 +46,9 @@ const Resume = () => {
             Professional Skills
           </li>
           <li
-            className={`${experienceData ? "active" : ""} resumeli`}
+            className={`transition-colors duration-300 ${
+              experienceData ? "active-tab" : "inactive-tab"
+            }`}
             onClick={() => {
               setEducationData(false);
               setSkillsData(false);
@@ -53,7 +59,9 @@ const Resume = () => {
             Experience
           </li>
           <li
-            className={`${achieveData ? "active" : ""} resumeli`}
+            className={`transition-colors duration-300 ${
+              achieveData ? "active-tab" : "inactive-tab"
+            }`}
             onClick={() => {
               setEducationData(false);
               setSkillsData(false);
@@ -64,12 +72,17 @@ const Resume = () => {
             Achievements
           </li>
         </ul>
+        <button className="mt-4 px-6 py-2 bg-orange-600 text-white rounded-lg shadow-md hover:bg-orange-700">
+          Download CV
+        </button>
       </div>
 
-      {educationData && <Education />}
-      {skillData && <Skills />}
-      {/* {experienceData && <Experience />} */}
-      {/* {achieveData && <Achievements />} */}
+      <div className="mt-10 px-4">
+        {educationData && <Education />}
+        {skillData && <Skills />}
+        {/* {experienceData && <Experience />} */}
+        {/* {achieveData && <Achievements />} */}
+      </div>
     </section>
   );
 };

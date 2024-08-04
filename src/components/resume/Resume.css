@@ -1,126 +1,85 @@
-/* 
-.resume-list {
-  display: flex;
-  justify-content: space-between;
+/* General styling for the section */
+#resume {
+  /* background-color: #2b2a2a; */
+  /* Black background */
+}
+
+/* Title section styling */
+#resume .flex {
+  margin-left: 70px;
+  margin-right: 60px;
+  padding-top: 5px;
+}
+
+/* Tab list styling */
+ul {
   padding: 0;
-  margin: 0;
-  list-style-type: none;
+  list-style: none;
 }
 
-.resume-list li {
-  flex: 1;
-  padding: 10px;
-  background-color: #2e2e2e;
-  border: 1px solid #ccc;
+li {
+  cursor: pointer;
+  padding: 10px 20px;
   text-align: center;
-  border-radius: 5px;
-  margin: 5px;
-}
-
-.resume-list li:hover {
-  color: #ff314f;
-}
-
-.content {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.year {
-  color: red;
-  margin-left: 1px;
-}
-
-.educ {
-  font-size: 24px;
   font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, border-bottom-color 0.3s;
+  border-bottom: 2px solid transparent;
 }
 
-.mt-14 {
-  margin-top: 3.5rem;
+.active-tab {
+  background-color: #1a1a1a;
+  /* Slightly lighter background for active tab */
+  color: #ff6600;
+  /* Orange color for active tab */
+  border-bottom-color: #ff6600;
+  /* Orange underline for active tab */
 }
 
-.w-full {
-  width: 100%;
-}
-
-.border-black {
-  border-color: black;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.gap-10 {
-  gap: 2.5rem;
-} 
-
-Custom ResumeCard styles
-.rm-container {
+.inactive-tab {
   background-color: #1e1e1e;
-  padding: 20px;
-  width: 40%;
-  margin-left: 50px;
+  /* Darker background for inactive tabs */
+  color: #cccccc;
+  /* Light gray color for inactive tabs */
 }
 
-.resumecard {
-  background-color: #292929;
+.inactive-tab:hover {
+  background-color: #333;
+  /* Lighter background on hover for inactive tabs */
+  color: #ffffff;
+  /* White color on hover */
+}
+
+/* Content styling */
+div.px-4 {
+  background-color: #222327;
+  /* Darker background for content area */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-  position: relative;
-  display: flex;
-  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.resumecard:hover {
-  transform: translateY(-10px);
-}
-
-.timeline {
-  position: absolute;
-  left: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.circle {
-  width: 12px;
-  height: 12px;
-  background-color: #ff314f;
-  border-radius: 50%;
-  margin: 10px 0;
-}
-
-.line {
-  width: 2px;
-  height: 80px;
-  background-color: #ff314f;
-}
-
-.details {
-  margin-left: 40px;
-}
-
-.resumecard h3 {
-  color: #fff;
-  margin-bottom: 5px;
-}
-
-.resumecard p {
-  color: #b3b3b3;
-  margin-bottom: 5px;
-}
-
-.resumecard p:last-child {
-  color: #ff314f;
+/* Button styling */
+/* button {
+  background-color: #ff6600;
+  Orange background
+  color: #ffffff;
+  White text
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
 } */
+
+/* button:hover {
+  background-color: #e55b00;
+  Slightly darker orange on hover
+  transform: scale(1.05);
+  Slightly enlarge button on hover
+} */
+
+button:focus {
+  outline: none;
+}

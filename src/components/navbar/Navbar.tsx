@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import logo from "../../assets/images/logo.jpg";
-import { navlinksdata, NavLink } from "../../constants/index.ts";
+import { navlinksdata } from "../../constants/index.ts";
 
 const Navbar: React.FC = () => {
   return (
@@ -12,19 +11,22 @@ const Navbar: React.FC = () => {
       <ul className="flex items-center gap-10">
         {navlinksdata.map(({ _id, title, link }) => (
           <li
-            className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
+            className="relative text-base font-normal text-gray-400 tracking-wide cursor-pointer group"
             key={_id}
           >
             <Link
-              activeClass="active"
               to={link}
               spy={true}
               smooth={true}
               offset={-80}
               duration={500}
+              className="relative z-10"
             >
               {title}
             </Link>
+            {/* Lines for hover effect */}
+            <span className="absolute left-0 right-0 bottom-0 h-[2px] bg-red-500 transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-hover:opacity-100" />
+            <span className="absolute left-0 right-0 top-0 h-[2px] bg-red-500 transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-hover:opacity-100" />
           </li>
         ))}
       </ul>

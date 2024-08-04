@@ -1,86 +1,46 @@
 import React from "react";
 import { FaTwitter, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
-import logo from "../../assets/images/logo.jpg";
 
 const Footer = () => {
   return (
-    <div className="w-full h-auto py-20 border-b-[1px] border-b-black grid grid-cols-4 gap-20">
-      <div className="w-full h-full flex flex-col gap-8 ">
-        <img src={logo} alt="logo" className="w-32" />
-        <div className="flex flex-col gap-4">
-          <h2 className="text-base uppercase font-titleFont mb-4">
-            Find me in
-          </h2>
-          <div className="flex gap-4">
-            <span className="bannerIcon">
-              <FaFacebookF />
-            </span>
-            <span className="bannerIcon">
-              <FaTwitter />
-            </span>
-            <span className="bannerIcon">
-              <FaLinkedinIn />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className="w-full h-full flex flex-col gap-4">
-        <h2 className="text-base uppercase font-titleFont mb-4">Quick Links</h2>
+    <div className="w-full h-auto py-20 border-t-[1px] border-t-black grid grid-cols-1 md:grid-cols-4 gap-20 text-center md:text-left">
+      <div
+        className="flex flex-col gap-4"
+        style={{ marginLeft: "100px", marginRight: "60px", paddingTop: "5px" }}
+      >
+        <h2 className="text-base font-bold text-orange-500 mb-4">
+          Quick Links
+        </h2>
         <ul className="flex flex-col gap-2">
           <li>
-            <a href="#home" className="text-gray-400 hover:text-white">
+            <a href="#home" className="text-gray-400 hover:text-orange-500">
               Home
             </a>
           </li>
           <li>
-            <a href="#features" className="text-gray-400 hover:text-white">
+            <a href="#features" className="text-gray-400 hover:text-orange-500">
               Services
             </a>
           </li>
           <li>
-            <a href="#projects" className="text-gray-400 hover:text-white">
+            <a href="#projects" className="text-gray-400 hover:text-orange-500">
               Projects
             </a>
           </li>
           <li>
-            <a href="#resume" className="text-gray-400 hover:text-white">
+            <a href="#resume" className="text-gray-400 hover:text-orange-500">
               Resume
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-gray-400 hover:text-white">
+            <a href="#contact" className="text-gray-400 hover:text-orange-500">
               Contact
             </a>
           </li>
         </ul>
       </div>
-      <div className="w-full h-full flex flex-col gap-4">
-        <h2 className="text-base uppercase font-titleFont mb-4">Resources</h2>
-        <ul className="flex flex-col gap-2">
-          <li>
-            <a href="#blog" className="text-gray-400 hover:text-white">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="#faq" className="text-gray-400 hover:text-white">
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a href="#support" className="text-gray-400 hover:text-white">
-              Support
-            </a>
-          </li>
-          <li>
-            <a href="#privacy" className="text-gray-400 hover:text-white">
-              Privacy Policy
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className="w-full h-full flex flex-col gap-4">
-        <h2 className="text-base uppercase font-titleFont mb-4">Contact</h2>
+      <div className="flex flex-col gap-4">
+        <h2 className="text-base font-bold text-orange-500 mb-4">Contact</h2>
         <ul className="flex flex-col gap-2">
           <li>
             <span className="text-gray-400">Mukono, Seeta, Uganda</span>
@@ -97,6 +57,13 @@ const Footer = () => {
             </span>
           </li>
         </ul>
+      </div>
+      <div className="flex flex-col gap-4">
+        <h2 className="text-base font-bold text-orange-500 mb-4">Thanks</h2>
+        <p className="text-gray-400">
+          Thank you for visiting my portfolio. I hope you found it informative
+          and engaging.
+        </p>
       </div>
     </div>
   );
