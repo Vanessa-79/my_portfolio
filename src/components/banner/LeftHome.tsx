@@ -22,7 +22,7 @@ const LeftHome = () => {
   return (
     <div className="w-1/2 flex flex-col gap-10">
       <div className="flex flex-col gap-5">
-        <h4 className="text-lg font-normal">WELCOME TO MY WORLD</h4>
+        <h4 className="text-lg font-normal text-white">WELCOME TO MY WORLD</h4>
         <h1 className="text-6xl font-bold text-white">
           Hi, I'm
           <span className="text-designColor capitalize"> Vanessa </span>
@@ -31,7 +31,7 @@ const LeftHome = () => {
           a <span>{text}</span>
           <Cursor cursorBlinking={false} cursorStyle="|" cursorColor="red" />
         </h2>
-        <p className="text-base font-bodyFont leading-6 tracking-wide">
+        <p className="text-base font-bodyFont leading-6 tracking-wide text-white">
           I'm a passionate and dedicated software developer with a strong
           foundation in programming languages such as JavaScript, TypeScript,
           and React. I have a proven track record of building high-quality,
@@ -45,7 +45,7 @@ const LeftHome = () => {
       </div>
       <div className="flex justify-between gap-20">
         <div>
-          <h2 className="text-base uppercase font-titleFont mb-4">
+          <h2 className="text-base uppercase font-titleFont mb-4 text-white">
             Find me In
           </h2>
           <div className="flex gap-4">
@@ -62,7 +62,7 @@ const LeftHome = () => {
         </div>
 
         <div>
-          <h2 className="text-base uppercase font-titleFont mb-4">
+          <h2 className="text-base uppercase font-titleFont mb-4 text-white">
             Best skill on
           </h2>
           <div className="flex gap-4">
