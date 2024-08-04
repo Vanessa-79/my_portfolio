@@ -15,7 +15,7 @@ export const navlinksdata: NavLink[] = [
 
   {
     _id: 1002,
-    title: "Features",
+    title: "Services",
     link: "features",
   },
 

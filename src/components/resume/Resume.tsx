@@ -3,8 +3,8 @@ import Title from "../layouts/Title";
 import "./Resume.css";
 import Education from "../resume/Education";
 import Skills from "../resume/Skills";
-import Achievements from "../resume/Achievements";
-import Experience from "../resume/Experience";
+// import Achievements from "../resume/Achievements";
+// import Experience from "../resume/Experience";
 
 const Resume = () => {
   const [educationData, setEducationData] = useState(true);
@@ -68,8 +68,8 @@ const Resume = () => {
 
       {educationData && <Education />}
       {skillData && <Skills />}
-      {experienceData && <Experience />}
-      {achieveData && <Achievements />}
+      {/* {experienceData && <Experience />} */}
+      {/* {achieveData && <Achievements />} */}
     </section>
   );
 };

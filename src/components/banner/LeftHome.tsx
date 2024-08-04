@@ -36,11 +36,14 @@ const LeftHome = () => {
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide text-white">
           I'm a passionate and dedicated software developer with a strong
-          foundation in programming languages such as JavaScript, TypeScript,
-          and React. I have a proven track record of building high-quality,
-          scalable, and user-friendly applications. I am always eager to learn
-          new skills and contribute to the community. Feel free to reach out if
-          you have any questions or need assistance with your projects.
+          foundation in programming languages such as Python and React, as well
+          as experience with frameworks like Django. I also have expertise in
+          front-end technologies including Bootstrap, Tailwind CSS, and graphic
+          design using Figma. I have a proven track record of building
+          high-quality, scalable, and user-friendly applications. I am always
+          eager to learn new skills and contribute to the community. Feel free
+          to reach out if you have any questions or need assistance with your
+          projects.
           <span className="text">|</span>{" "}
           <a href="#contact" className="text-red-500 hover:underline">
             Contact me
