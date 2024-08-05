@@ -31,16 +31,9 @@ const Features = () => {
       description:
         "I offer comprehensive web development services, including front-end and back-end development. I use modern technologies and frameworks to create responsive and user-friendly websites.",
       moreInfo:
-        "Whether you need a new website or an update to an existing one, I can help. I work with technologies such as HTML, CSS, JavaScript, React, and more to ensure your site is functional and visually appealing.",
+        "Whether you need a new website or an update to an existing one, I can help. I work with technologies such as Python, HTML, CSS, JavaScript, React,  and more to ensure your site is functional and visually appealing.",
     },
-    {
-      icon: "fas fa-paint-brush",
-      title: "Graphic Design",
-      description:
-        "Expert in creating visually stunning designs for various media. From logos and branding materials to web graphics and social media visuals, I craft designs that make an impact.",
-      moreInfo:
-        "My graphic design services include creating high-quality graphics, illustrations, and layouts. I use tools like Adobe Illustrator, Photoshop, and Figma to bring your vision to life and enhance your brand's visual identity.",
-    },
+
     {
       icon: "fas fa-database",
       title: "Database Management",
@@ -48,6 +41,42 @@ const Features = () => {
         "Offering database design, implementation, and management services to ensure your data is well-organized, secure, and accessible. Expertise in both relational and NoSQL databases.",
       moreInfo:
         "I handle tasks such as database schema design, performance optimization, data migration, and backup solutions. My goal is to provide robust database solutions that support your business's needs and ensure data integrity.",
+    },
+
+    {
+      icon: "fas fa-paint-brush",
+      title: "Graphics Design",
+      description:
+        "Expert in creating visually stunning designs for various media. From logos and branding materials to business cards, flyers, and banners, I craft designs that make an impact.",
+      moreInfo:
+        "My graphic design services include designing high-quality business cards, flyers, banners, and other marketing materials. I use Adobe Illustrator, Photoshop, and Figma to bring your vision to life and enhance your brand's visual identity.",
+    },
+
+    {
+      icon: "fas fa-pencil-ruler",
+      title: "Human-Centered Design & Wireframing",
+      description:
+        "Experienced in applying Human-Centered Design (HCD) principles to create intuitive and user-focused interfaces. I use Figma to develop detailed wireframes and interactive prototypes that ensure the design aligns with user needs and enhances overall usability.",
+      moreInfo:
+        "My expertise includes creating wireframes for various systems, designing interactive prototypes, and mapping user flows to streamline user experiences. By leveraging Figma, I efficiently translate ideas into visual representations, validate design concepts, and iterate based on user feedback to deliver impactful solutions.",
+    },
+
+    {
+      icon: "fas fa-project-diagram",
+      title: "UML Diagramming",
+      description:
+        "Proficient in creating detailed UML diagrams to visually represent system architecture, design processes, and interactions. My skills include designing class diagrams, sequence diagrams, use case diagrams, and more to effectively communicate complex systems and processes.",
+      moreInfo:
+        "I use UML diagrams to provide clear and structured documentation for software development and system design. By leveraging these diagrams, I can map out system components, define relationships, and illustrate workflows, ensuring a comprehensive understanding of the system's structure and functionality.",
+    },
+
+    {
+      icon: "fas fa-mobile-alt",
+      title: "Responsive Design",
+      description:
+        "Skilled in creating responsive designs that adapt to various screen sizes and devices. Proficient in using CSS frameworks and media queries to ensure a consistent user experience across platforms.",
+      moreInfo:
+        "I focus on developing flexible layouts and scalable graphics that provide an optimal viewing experience on desktops, tablets, and smartphones. My approach ensures that designs are visually appealing and functional on any device.",
     },
   ];
 
@@ -60,8 +89,8 @@ const Features = () => {
         <Title
           title="SERVICES"
           des="What I Do"
-          titleStyle={{ fontSize: "1.5rem", marginLeft: "4rem" }} 
-          descriptionStyle={{ fontSize: "3rem", marginLeft: "4rem" }} 
+          titleStyle={{ fontSize: "1.5rem", marginLeft: "4rem" }}
+          descriptionStyle={{ fontSize: "3rem", marginLeft: "4rem" }}
         />
       </div>
 
@@ -69,7 +98,7 @@ const Features = () => {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-[#202327] p-6 rounded-lg shadow-xl transform transition-transform duration-300 hover:bg-[#1e2024]"
+            className="bg-[#202327] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:bg-[#1e2024] hover:shadow-xl"
             variants={cardVariants}
             initial="initial"
             whileHover="hover"

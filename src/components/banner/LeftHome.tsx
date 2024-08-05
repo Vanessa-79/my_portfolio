@@ -44,15 +44,15 @@ const LeftHome = () => {
         style={{ marginLeft: "20px", marginRight: "60px", paddingTop: "5px" }}
       >
         <h4 className="text-lg font-normal text-white">WELCOME TO MY WORLD</h4>
-        <h1 className="text-6xl font-bold text-white">
+        <h1 className="text-4xl font-bold text-white">
           Hi, I'm
-          <span className="text-designColor capitalize"> Vanessa </span>
+          <span className="text-red-500 capitalize"> Vanessa </span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-2xl font-bold text-white">
           a <span className="text-orange-400">{text}</span>{" "}
           <Cursor cursorBlinking={false} cursorStyle="|" cursorColor="red" />
         </h2>
-        <p className="text-base font-bodyFont leading-6 tracking-wide text-white">
+        <p className="text-lg font-normal text-gray-400 mb-2">
           I'm a passionate and dedicated software developer with a strong
           foundation in programming languages such as Python and React, as well
           as experience with frameworks like Django. I also have expertise in
@@ -63,20 +63,20 @@ const LeftHome = () => {
           to reach out if you have any questions or need assistance with your
           projects.
           <span className="text">|</span>{" "}
-          <a href="#contact" className="text-orange-500 hover:underline">
+          <a href="#contact" className="text-red-500 hover:underline">
             Contact me
           </a>{" "}
           <span className="text">|</span>{" "}
           <a
             href="https://github.com/Vanessa-79"
-            className="text-orange-500 hover:underline"
+            className="text-red-500 hover:underline"
           >
             View my GitHub
           </a>{" "}
           <span className="text">|</span>{" "}
           <a
             href="https://www.linkedin.com/in/vanessa-nassanga-6807222a4/"
-            className="text-orange-500 hover:underline"
+            className="text-red-500 hover:underline"
           >
             LinkedIn
           </a>

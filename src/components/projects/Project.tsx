@@ -20,29 +20,34 @@ const Project: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-        <div>
-          <ProjectCard
-            title="Daystar Project 1"
-            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sem vitae enim laoreet, sed posuere ligula semper."
-            src={projectOne}
-          />
-        </div>
-
-        <div>
-          <ProjectCard
-            title="Daystar Project 2"
-            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sem vitae enim laoreet, sed posuere ligula semper."
-            src={projectTwo}
-          />
-        </div>
-
-        <div>
-          <ProjectCard
-            title="Daystar Project 3"
-            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sem vitae enim laoreet, sed posuere ligula semper."
-            src={projectThree}
-          />
-        </div>
+        <ProjectCard
+          title="Daystar Daycare Web App"
+          description="A comprehensive web application for Daystar Daycare, focusing on record keeping and management."
+          src={projectOne}
+          status="Completed (Python, Django, JS)"
+          githubLink="https://github.com/Vanessa-79/daystar_management_system.git"
+        />
+        <ProjectCard
+          title="Uplift Donation Website"
+          description="A platform dedicated to empowering individuals and communities in need by facilitating charitable donations and support initiatives."
+          src={projectTwo}
+          status="In Progress (Python, Django, JS)"
+          githubLink="https://github.com/Vanessa-79/life-changingNew.git"
+        />
+        <ProjectCard
+          title="Music App for Artist"
+          description="An app tailored for a specific musician, integrating features for music management and interaction."
+          src={projectThree}
+          status="In Progress (Python, Django, JS)"
+          githubLink="#" 
+        />
+        {/* <ProjectCard
+          title="Student Attendance Management System"
+          description="A system using QR codes for efficient student attendance tracking."
+          src={projectThree}
+          status="Completed (HTML, CSS, PHP, JS)"
+          githubLink="https://github.com/yourusername/student-attendance-management-system" // Replace with actual link
+        /> */}
       </div>
     </section>
   );
