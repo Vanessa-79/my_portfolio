@@ -1,23 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Banner.css";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedinIn,
-  FaReact,
-  FaFacebookF,
-} from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaReact } from "react-icons/fa";
 import { SiDjango, SiFigma, SiBootstrap } from "react-icons/si";
 
 const LeftHome = () => {
   const [text] = useTypewriter({
-    words: ["Software engineer", "Database manager", "Web designer"],
+    words: [
+      "Software developer",
+      "Database manager",
+      "Web designer",
+      "Graphics designer",
+    ],
     loop: true,
     typeSpeed: 70,
     deleteSpeed: 10,
     delaySpeed: 2000,
   });
+
+  useEffect(() => {
+    const icons = document.querySelectorAll(".bannerIcon");
+    icons.forEach((icon) => {
+      icon.addEventListener("mouseover", () => {
+        icon.classList.add("hovered");
+      });
+      icon.addEventListener("mouseout", () => {
+        icon.classList.remove("hovered");
+      });
+    });
+
+    return () => {
+      icons.forEach((icon) => {
+        icon.removeEventListener("mouseover", () => {});
+        icon.removeEventListener("mouseout", () => {});
+      });
+    };
+  }, []);
 
   return (
     <div className="w-full lgl:w-1/2 flex flex-col gap-10">
@@ -31,7 +49,7 @@ const LeftHome = () => {
           <span className="text-designColor capitalize"> Vanessa </span>
         </h1>
         <h2 className="text-4xl font-bold text-white">
-          a <span className="text-orange-500">{text}</span>{" "}
+          a <span className="text-orange-400">{text}</span>{" "}
           <Cursor cursorBlinking={false} cursorStyle="|" cursorColor="red" />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide text-white">
@@ -45,7 +63,7 @@ const LeftHome = () => {
           to reach out if you have any questions or need assistance with your
           projects.
           <span className="text">|</span>{" "}
-          <a href="#contact" className="text-red-500 hover:underline">
+          <a href="#contact" className="text-orange-500 hover:underline">
             Contact me
           </a>{" "}
           <span className="text">|</span>{" "}
@@ -58,7 +76,7 @@ const LeftHome = () => {
           <span className="text">|</span>{" "}
           <a
             href="https://www.linkedin.com/in/vanessa-nassanga-6807222a4/"
-            className="text-blue-500 hover:underline"
+            className="text-orange-500 hover:underline"
           >
             LinkedIn
           </a>
@@ -70,15 +88,29 @@ const LeftHome = () => {
             Find me In
           </h2>
           <div className="flex gap-4">
-            <span className="bannerIcon text-blue-600">
+            <a
+              href="https://www.facebook.com/profile.php?id=100051636019516"
+              rel="noopener noreferrer"
+              className="bannerIcon text-blue-600"
+            >
               <FaFacebookF />
-            </span>
-            <span className="bannerIcon text-blue-400">
+            </a>
+            <a
+              href="https://x.com/Vanie779"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bannerIcon text-blue-400"
+            >
               <FaTwitter />
-            </span>
-            <span className="bannerIcon text-blue-700">
-              <FaLinkedinIn />
-            </span>
+            </a>
+            <a
+              href="https://www.instagram.com/vanessa_nassanga/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bannerIcon text-blue-700"
+            >
+              <FaInstagram />
+            </a>
           </div>
         </div>
 

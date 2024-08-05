@@ -1,6 +1,7 @@
 import React from "react";
 import LeftHome from "./LeftHome";
-import cartoon from "../../assets/images/profile/cartoon.jpg";
+import im3 from "../../assets/images/im3.jpg";
+
 import "./Banner.css";
 
 const Banner = () => {
@@ -14,7 +15,7 @@ const Banner = () => {
       <div className="w-full lgl:w-1/2 flex justify-center items-center relative">
         <div className="bannerImageContainer">
           <div className="bannerImageBackground"></div>
-          <img src={cartoon} alt="profile-img" className="bannerImage" />
+          <img src={im3} alt="profile-img" className="bannerImage" />
         </div>
       </div>
     </section>
