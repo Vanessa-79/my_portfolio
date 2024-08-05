@@ -20,7 +20,7 @@ const LeftHome = () => {
   });
 
   return (
-    <div className="w-1/2 flex flex-col gap-10">
+    <div className="w-full lgl:w-1/2 flex flex-col gap-10">
       <div
         className="flex flex-col gap-5"
         style={{ marginLeft: "20px", marginRight: "60px", paddingTop: "5px" }}
@@ -64,7 +64,7 @@ const LeftHome = () => {
           </a>
         </p>
       </div>
-      <div className="flex justify-between gap-20">
+      <div className="flex flex-col xl:flex-row justify-between gap-6 lgl:gap-0">
         <div>
           <h2 className="text-base uppercase font-titleFont mb-4 text-white">
             Find me In

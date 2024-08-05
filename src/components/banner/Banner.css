@@ -1,7 +1,21 @@
 /* Banner.css */
 
+/* Container for the entire section */
+.bannerSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* Align items to the top of the container */
+    justify-content: space-between;
+    /* Ensure items are spaced out */
+    padding: 0 20px;
+    /* Add padding for better spacing */
+}
+
+/* Container for the banner image */
 .bannerImageContainer {
     position: relative;
+    margin-top: 200px;
     width: 500px;
     height: 520px;
     display: flex;
@@ -49,4 +63,51 @@
 .bannerIcon:hover {
     color: #ff8c00;
     /* Change this to the desired hover color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bannerImageContainer {
+        width: 300px;
+        height: 320px;
+        margin-right: 0;
+        margin-left: 20px;
+        /* Ensure margin from the left */
+        top: -60px;
+        /* Adjust this value as needed */
+    }
+
+    .bannerImageBackground {
+        width: 300px;
+        height: 300px;
+    }
+
+    .bannerImage {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bannerImageContainer {
+        width: 250px;
+        height: 270px;
+        margin-right: 0;
+        margin-left: 20px;
+        /* Ensure margin from the left */
+        top: -40px;
+        /* Adjust this value as needed */
+        display: none;
+        /* Hide the image container on smaller screens */
+    }
+
+    .bannerImageBackground {
+        display: none;
+        /* Ensure background is hidden */
+    }
+
+    .bannerImage {
+        display: none;
+        /* Ensure the image is hidden */
+    }
 }

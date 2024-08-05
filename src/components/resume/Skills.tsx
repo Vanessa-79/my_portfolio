@@ -3,15 +3,14 @@ import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
-    <div className="flex gap-12">
+    <div className="w-full flex flex-col lg:flex-row gap-10 lgl:gap-20">
       {/* Design Skills Section */}
-      <div
-        className="w-1/3"
-        style={{ marginLeft: "auto" }}
-      >
+      <div className="w-full lg:w-1/3">
         <div className="py-10 font-titleFont">
           <p className="text-sm text-designColor tracking-[4px]">FEATURES</p>
-          <h2 className="text-4xl font-bold text-white">Design Skills</h2>
+          <h2 className="text-2xl lg:text-4xl font-bold text-white">
+            Design Skills
+          </h2>
         </div>
 
         <div className="mt-14 w-full flex flex-col gap-6">
@@ -54,10 +53,12 @@ const Skills = () => {
       </div>
 
       {/* Development Skills Section */}
-      <div className="w-1/3">
+      <div className="w-full lg:w-1/3">
         <div className="py-10 font-titleFont">
           <p className="text-sm text-designColor tracking-[4px]">FEATURES</p>
-          <h2 className="text-4xl font-bold text-white">Development Skills</h2>
+          <h2 className="text-2xl lg:text-4xl font-bold text-white">
+            Development Skills
+          </h2>
         </div>
 
         <div className="mt-14 w-full flex flex-col gap-6">
@@ -134,10 +135,12 @@ const Skills = () => {
       </div>
 
       {/* Soft Skills Section */}
-      <div className="w-1/3">
+      <div className="w-full lg:w-1/3">
         <div className="py-10 font-titleFont">
           <p className="text-sm text-designColor tracking-[4px]">FEATURES</p>
-          <h2 className="text-4xl font-bold text-white">Soft Skills</h2>
+          <h2 className="text-2xl lg:text-4xl font-bold text-white">
+            Soft Skills
+          </h2>
         </div>
 
         <div className="mt-14 w-full flex flex-col gap-6">

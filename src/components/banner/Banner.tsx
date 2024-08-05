@@ -7,11 +7,11 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="w-full h-[800px] pt-10 flex items-center border-b-[1px] border-b-black"
-      style={{ marginLeft: "70px", marginRight: "60px", paddingTop: "5px" }} // Adjusted paddingTop to 5px
+      className="w-full pt-10 flex flex-col lgl:flex-row gap-10 xl:gap-0 items-center border-b-[1px] border-b-black"
+      style={{ marginLeft: "70px", marginRight: "60px", paddingTop: "5px" }}
     >
       <LeftHome />
-      <div className="w-1/2 flex justify-center items-center relative">
+      <div className="w-full lgl:w-1/2 flex justify-center items-center relative">
         <div className="bannerImageContainer">
           <div className="bannerImageBackground"></div>
           <img src={cartoon} alt="profile-img" className="bannerImage" />

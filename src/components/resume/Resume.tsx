@@ -18,7 +18,7 @@ const Resume = () => {
         <Title title="MY EXPERIENCE" des="My Resume" />
       </div>
       <div className="mt-10 flex flex-col items-center">
-        <ul className="w-full flex justify-center items-center space-x-4 border-b-2 border-gray-600">
+        <ul className="w-full flex justify-center items-center space-x-4 border-b-2 border-gray-600 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
           <li
             className={`transition-colors duration-300 ${
               educationData ? "active-tab" : "inactive-tab"
