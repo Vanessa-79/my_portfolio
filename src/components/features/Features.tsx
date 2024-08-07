@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Title from "../layouts/Title";
 import { motion } from "framer-motion";
 
@@ -18,9 +18,9 @@ const cardVariants = {
 };
 
 const Features = () => {
-  const [expanded, setExpanded] = useState(null);
+  const [expanded, setExpanded] = useState<number | null>(null);
 
-  const toggleExpand = (index) => {
+  const toggleExpand = (index: number) => {
     setExpanded(expanded === index ? null : index);
   };
 
@@ -31,9 +31,8 @@ const Features = () => {
       description:
         "I offer comprehensive web development services, including front-end and back-end development. I use modern technologies and frameworks to create responsive and user-friendly websites.",
       moreInfo:
-        "Whether you need a new website or an update to an existing one, I can help. I work with technologies such as Python, HTML, CSS, JavaScript, React,  and more to ensure your site is functional and visually appealing.",
+        "Whether you need a new website or an update to an existing one, I can help. I work with technologies such as Python, HTML, CSS, JavaScript, React, and more to ensure your site is functional and visually appealing.",
     },
-
     {
       icon: "fas fa-database",
       title: "Database Management",
@@ -42,7 +41,6 @@ const Features = () => {
       moreInfo:
         "I handle tasks such as database schema design, performance optimization, data migration, and backup solutions. My goal is to provide robust database solutions that support your business's needs and ensure data integrity.",
     },
-
     {
       icon: "fas fa-paint-brush",
       title: "Graphics Design",
@@ -51,7 +49,6 @@ const Features = () => {
       moreInfo:
         "My graphic design services include designing high-quality business cards, flyers, banners, and other marketing materials. I use Adobe Illustrator, Photoshop, and Figma to bring your vision to life and enhance your brand's visual identity.",
     },
-
     {
       icon: "fas fa-pencil-ruler",
       title: "Human-Centered Design & Wireframing",
@@ -60,7 +57,6 @@ const Features = () => {
       moreInfo:
         "My expertise includes creating wireframes for various systems, designing interactive prototypes, and mapping user flows to streamline user experiences. By leveraging Figma, I efficiently translate ideas into visual representations, validate design concepts, and iterate based on user feedback to deliver impactful solutions.",
     },
-
     {
       icon: "fas fa-project-diagram",
       title: "UML Diagramming",
@@ -69,7 +65,6 @@ const Features = () => {
       moreInfo:
         "I use UML diagrams to provide clear and structured documentation for software development and system design. By leveraging these diagrams, I can map out system components, define relationships, and illustrate workflows, ensuring a comprehensive understanding of the system's structure and functionality.",
     },
-
     {
       icon: "fas fa-mobile-alt",
       title: "Responsive Design",

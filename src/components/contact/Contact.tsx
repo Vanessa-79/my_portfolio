@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import Title from "../layouts/Title";
 import ContactLeft from "./ContactLeft";
-
 
 const Contact = () => {
   const [username, setUsername] = useState("");
@@ -19,7 +18,7 @@ const Contact = () => {
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (username === "") {
       setError("Please fill in all fields");
@@ -64,13 +63,43 @@ const Contact = () => {
     }
   };
 
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    switch (name) {
+      case "username":
+        setUsername(value);
+        break;
+      case "phoneNumber":
+        setPhoneNumber(value);
+        break;
+      case "email":
+        setEmail(value);
+        break;
+      case "subject":
+        setSubject(value);
+        break;
+      case "message":
+        setMessage(value);
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <section
       id="contact"
       className="w-full py-20 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center mb-8">
-        <Title title="CONTACT" des="GET IN TOUCH" />
+        <Title
+          title="CONTACT"
+          des="GET IN TOUCH"
+          titleStyle={{}} // Provide default styles or an empty object
+          descriptionStyle={{}} // Provide default styles or an empty object
+        />
       </div>
 
       <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
@@ -88,7 +117,8 @@ const Contact = () => {
                   FULL NAME
                 </p>
                 <input
-                  onChange={(e) => setUsername(e.target.value)}
+                  name="username"
+                  onChange={handleChange}
                   value={username}
                   className={`contactInput ${
                     invalidField === "username" ? "border-red-500" : ""
@@ -102,7 +132,8 @@ const Contact = () => {
                   Phone number
                 </p>
                 <input
-                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  name="phoneNumber"
+                  onChange={handleChange}
                   value={phoneNumber}
                   className={`contactInput ${
                     invalidField === "phoneNumber" ? "border-red-500" : ""
@@ -117,7 +148,8 @@ const Contact = () => {
                 Email
               </p>
               <input
-                onChange={(e) => setEmail(e.target.value)}
+                name="email"
+                onChange={handleChange}
                 value={email}
                 className={`contactInput ${
                   invalidField === "email" ? "border-red-500" : ""
@@ -131,7 +163,8 @@ const Contact = () => {
                 Subject
               </p>
               <input
-                onChange={(e) => setSubject(e.target.value)}
+                name="subject"
+                onChange={handleChange}
                 value={subject}
                 className={`contactInput ${
                   invalidField === "subject" ? "border-red-500" : ""
@@ -145,13 +178,14 @@ const Contact = () => {
                 Message
               </p>
               <textarea
-                onChange={(e) => setMessage(e.target.value)}
+                name="message"
+                onChange={handleChange}
                 value={message}
                 className={`contactTextArea ${
                   invalidField === "message" ? "border-red-500" : ""
                 }`}
-                cols="30"
-                rows="8"
+                cols={30}
+                rows={8}
               ></textarea>
             </div>
             <div>

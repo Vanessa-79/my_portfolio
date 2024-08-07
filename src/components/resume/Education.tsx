@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import ResumeCard from "./ResumeCard";
 
 const Education = () => {
-  const [selectedCard, setSelectedCard] = useState(null);
+  const [selectedCard, setSelectedCard] = useState<number | null>(null);
 
-  const handleCardClick = (index) => {
+  const handleCardClick = (index: number) => {
     setSelectedCard(selectedCard === index ? null : index);
   };
 
@@ -27,7 +27,7 @@ const Education = () => {
           Education
         </h2>
       </div>
-      <div className="flex flex-col gap-6 md:gap-10 " style={{width: "90%"}}>
+      <div className="flex flex-col gap-6 md:gap-10 " style={{ width: "90%" }}>
         <motion.div
           className="transition-transform transform hover:scale-105"
           initial="initial"

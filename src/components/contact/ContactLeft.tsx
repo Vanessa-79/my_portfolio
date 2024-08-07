@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import im3 from "../../assets/images/im3.jpg";
 import { FaTwitter, FaFacebookF, FaWhatsapp } from "react-icons/fa"; // Importing FaWhatsapp
 

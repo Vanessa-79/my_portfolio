@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Title from "../layouts/Title";
 import Education from "./Education";
 import Skills from "./Skills";

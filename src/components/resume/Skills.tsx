@@ -1,7 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const SkillBar = ({ skill, percentage }) => {
+// Define the props type for the SkillBar component
+interface SkillBarProps {
+  skill: string;
+  percentage: number;
+}
+
+// Define the SkillBar component
+const SkillBar: React.FC<SkillBarProps> = ({ skill, percentage }) => {
   return (
     <div className="overflow-x-hidden">
       <p className="text-sm uppercase font-medium text-gray-500">{skill}</p>
@@ -45,7 +52,6 @@ const Skills = () => {
     { skill: "Version Control (Git)", percentage: 85 },
     { skill: "Problem Solving", percentage: 90 },
     { skill: "Teamwork", percentage: 80 },
-    { skill: "Self-Motivation", percentage: 85 },
     { skill: "Self-Motivation", percentage: 85 },
     { skill: "Effective Communication", percentage: 75 },
     { skill: "Microsoft Office Suite", percentage: 90 },
