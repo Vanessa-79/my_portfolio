@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import "./Navbar.module.css"
+import "./Navbar.module.css";
 import { FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { navlinksdata } from "../../constants/index.ts";
+import im3 from "../../assets/images/im3.jpg"; // Import the image
 
 const Navbar: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -25,7 +26,8 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
-      <div>
+      <div className="flex items-center gap-4">
+        <img src={im3} alt="Profile" className="w-10 h-10 rounded-full" />
         <h1 className="text-white font-bold text-3xl">Vanessa</h1>
       </div>
       <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
@@ -73,7 +75,11 @@ const Navbar: React.FC = () => {
             <MdClose />
           </span>
           <div className="flex flex-col items-start mt-16 gap-8">
-            <img className="w-32 mb-4" src="logo" alt="Logo" />
+            <img
+              className="w-32 h-32 rounded-full mb-4"
+              src={im3}
+              alt="Profile"
+            />
             <p className="text-sm text-gray-400 mt-2 mb-4">
               Vanessa is a passionate software developer with expertise in web
               development, graphic design, and database management. With a
