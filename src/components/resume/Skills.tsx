@@ -1,221 +1,132 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Skills = () => {
+const SkillBar = ({ skill, percentage }) => {
   return (
-    <div className="w-full flex flex-col lg:flex-row gap-10 lgl:gap-20">
-      {/* Design Skills Section */}
-      <div className="w-full lg:w-1/3">
-        <div className="py-10 font-titleFont">
-          <p className="text-sm text-designColor tracking-[4px]">FEATURES</p>
-          <h2 className="text-2xl lg:text-4xl font-bold text-white">
+    <div className="overflow-x-hidden">
+      <p className="text-sm uppercase font-medium text-gray-500">{skill}</p>
+      <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
+        <motion.span
+          initial={{ x: "-100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
+          style={{ width: `${percentage}%` }}
+        >
+          <span className="absolute -top-7 right-0 text-gray-500">
+            {percentage}%
+          </span>
+        </motion.span>
+      </span>
+    </div>
+  );
+};
+
+const Skills = () => {
+  const designSkills = [
+    { skill: "Figma", percentage: 90 },
+    { skill: "Adobe Photoshop", percentage: 60 },
+    { skill: "Adobe Illustrator", percentage: 70 },
+    { skill: "Graphic Design", percentage: 85 },
+  ];
+
+  const developmentSkills = [
+    { skill: "Python", percentage: 95 },
+    { skill: "Django", percentage: 70 },
+    { skill: "React", percentage: 60 },
+    { skill: "JavaScript", percentage: 30 },
+    { skill: "Bootstrap", percentage: 75 },
+    { skill: "Tailwind CSS", percentage: 65 },
+    { skill: "CSS", percentage: 70 },
+    { skill: "SQL", percentage: 50 },
+  ];
+
+  const softSkills = [
+    { skill: "Version Control (Git)", percentage: 85 },
+    { skill: "Problem Solving", percentage: 90 },
+    { skill: "Teamwork", percentage: 80 },
+    { skill: "Self-Motivation", percentage: 85 },
+    { skill: "Self-Motivation", percentage: 85 },
+    { skill: "Effective Communication", percentage: 75 },
+    { skill: "Microsoft Office Suite", percentage: 90 },
+    { skill: "Team Collaboration Tools (Trello)", percentage: 95 },
+  ];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
+    >
+      <div className="w-full lgl:w-1/2">
+        <div className="py-12 font-titleFont flex flex-col gap-4">
+          <p className="text-sm text-designColor tracking-[4px] uppercase">
+            Features
+          </p>
+          <h2
+            className="text-3xl md:text-4xl font-bold text-white"
+            style={{ fontSize: "30px" }}
+          >
             Design Skills
           </h2>
         </div>
-
         <div className="mt-14 w-full flex flex-col gap-6">
-          {/* Photoshop */}
-          <div className="relative">
-            <p className="text-sm uppercase font-medium">Photoshop</p>
-            <span className="w-full h-2 bg-opacity-20 inline-flex rounded-md mt-2 bg-gray-300">
-              <motion.span
-                initial={{ width: "0%", opacity: 0 }}
-                animate={{ width: "100%", opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0 text-sm font-semibold text-white">
-                  100%
-                </span>
-              </motion.span>
-            </span>
-          </div>
-
-          {/* Figma */}
-          <div className="relative">
-            <p className="text-sm uppercase font-medium">Figma</p>
-            <span className="w-full h-2 bg-opacity-20 inline-flex rounded-md mt-2 bg-gray-300">
-              <motion.span
-                initial={{ width: "0%", opacity: 0 }}
-                animate={{ width: "90%", opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0 text-sm font-semibold text-white">
-                  90%
-                </span>
-              </motion.span>
-            </span>
-          </div>
-
-          {/* Add more design skills as needed */}
+          {designSkills.map((skill, index) => (
+            <SkillBar
+              key={index}
+              skill={skill.skill}
+              percentage={skill.percentage}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Development Skills Section */}
-      <div className="w-full lg:w-1/3">
-        <div className="py-10 font-titleFont">
-          <p className="text-sm text-designColor tracking-[4px]">FEATURES</p>
-          <h2 className="text-2xl lg:text-4xl font-bold text-white">
+      <div className="w-full lgl:w-1/2">
+        <div className="py-12 font-titleFont flex flex-col gap-4">
+          <p className="text-sm text-designColor tracking-[4px] uppercase">
+            Features
+          </p>
+          <h2
+            className="text-3xl md:text-4xl font-bold text-white"
+            style={{ fontSize: "30px" }}
+          >
             Development Skills
           </h2>
         </div>
-
-        <div className="mt-14 w-full flex flex-col gap-6">
-          {/* JavaScript */}
-          <div className="relative">
-            <p className="text-sm uppercase font-medium">JavaScript</p>
-            <span className="w-full h-2 bg-opacity-20 inline-flex rounded-md mt-2 bg-gray-300">
-              <motion.span
-                initial={{ width: "0%", opacity: 0 }}
-                animate={{ width: "85%", opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0 text-sm font-semibold text-white">
-                  85%
-                </span>
-              </motion.span>
-            </span>
-          </div>
-
-          {/* Python */}
-          <div className="relative">
-            <p className="text-sm uppercase font-medium">Python</p>
-            <span className="w-full h-2 bg-opacity-20 inline-flex rounded-md mt-2 bg-gray-300">
-              <motion.span
-                initial={{ width: "0%", opacity: 0 }}
-                animate={{ width: "80%", opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0 text-sm font-semibold text-white">
-                  80%
-                </span>
-              </motion.span>
-            </span>
-          </div>
-
-          {/* Django */}
-          <div className="relative">
-            <p className="text-sm uppercase font-medium">Django</p>
-            <span className="w-full h-2 bg-opacity-20 inline-flex rounded-md mt-2 bg-gray-300">
-              <motion.span
-                initial={{ width: "0%", opacity: 0 }}
-                animate={{ width: "70%", opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0 text-sm font-semibold text-white">
-                  70%
-                </span>
-              </motion.span>
-            </span>
-          </div>
-
-          {/* React */}
-          <div className="relative">
-            <p className="text-sm uppercase font-medium">React</p>
-            <span className="w-full h-2 bg-opacity-20 inline-flex rounded-md mt-2 bg-gray-300">
-              <motion.span
-                initial={{ width: "0%", opacity: 0 }}
-                animate={{ width: "75%", opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0 text-sm font-semibold text-white">
-                  75%
-                </span>
-              </motion.span>
-            </span>
-          </div>
-
-          {/* Add more development skills as needed */}
+        <div className="flex flex-col gap-6">
+          {developmentSkills.map((skill, index) => (
+            <SkillBar
+              key={index}
+              skill={skill.skill}
+              percentage={skill.percentage}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Soft Skills Section */}
-      <div className="w-full lg:w-1/3">
-        <div className="py-10 font-titleFont">
-          <p className="text-sm text-designColor tracking-[4px]">FEATURES</p>
-          <h2 className="text-2xl lg:text-4xl font-bold text-white">
+      <div className="w-full lgl:w-1/2">
+        <div className="py-12 font-titleFont flex flex-col gap-4">
+          <p className="text-sm text-designColor tracking-[4px] uppercase">
+            Features
+          </p>
+          <h2
+            className="text-3xl md:text-4xl font-bold text-white"
+            style={{ fontSize: "30px" }}
+          >
             Soft Skills
           </h2>
         </div>
-
-        <div className="mt-14 w-full flex flex-col gap-6">
-          {/* Problem Solving */}
-          <div className="relative">
-            <p className="text-sm uppercase font-medium">Problem Solving</p>
-            <span className="w-full h-2 bg-opacity-20 inline-flex rounded-md mt-2 bg-gray-300">
-              <motion.span
-                initial={{ width: "0%", opacity: 0 }}
-                animate={{ width: "90%", opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0 text-sm font-semibold text-white">
-                  90%
-                </span>
-              </motion.span>
-            </span>
-          </div>
-
-          {/* Teamwork */}
-          <div className="relative">
-            <p className="text-sm uppercase font-medium">Teamwork</p>
-            <span className="w-full h-2 bg-opacity-20 inline-flex rounded-md mt-2 bg-gray-300">
-              <motion.span
-                initial={{ width: "0%", opacity: 0 }}
-                animate={{ width: "85%", opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0 text-sm font-semibold text-white">
-                  85%
-                </span>
-              </motion.span>
-            </span>
-          </div>
-
-          {/* Self-Motivation */}
-          <div className="relative">
-            <p className="text-sm uppercase font-medium">Self-Motivation</p>
-            <span className="w-full h-2 bg-opacity-20 inline-flex rounded-md mt-2 bg-gray-300">
-              <motion.span
-                initial={{ width: "0%", opacity: 0 }}
-                animate={{ width: "80%", opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0 text-sm font-semibold text-white">
-                  80%
-                </span>
-              </motion.span>
-            </span>
-          </div>
-
-          {/* Time Management */}
-          <div className="relative">
-            <p className="text-sm uppercase font-medium">Time Management</p>
-            <span className="w-full h-2 bg-opacity-20 inline-flex rounded-md mt-2 bg-gray-300">
-              <motion.span
-                initial={{ width: "0%", opacity: 0 }}
-                animate={{ width: "75%", opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0 text-sm font-semibold text-white">
-                  75%
-                </span>
-              </motion.span>
-            </span>
-          </div>
-
-          {/* Add more soft skills as needed */}
+        <div className="flex flex-col gap-6">
+          {softSkills.map((skill, index) => (
+            <SkillBar
+              key={index}
+              skill={skill.skill}
+              percentage={skill.percentage}
+            />
+          ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

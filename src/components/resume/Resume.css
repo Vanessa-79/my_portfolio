@@ -1,138 +1,19 @@
-/* General styling for the section */
-#resume {
-  /* background-color: #2b2a2a; */
-  /* Black background */
+/* If using custom CSS */
+.resumeLi {
+  margin: 0 20px;
+  /* Apply margin of 20px on both left and right */
+  background-color: #f0f0f0;
+  /* Default background color */
 }
 
-/* Title section styling */
-#resume .flex {
-  margin-left: 70px;
-  margin-right: 60px;
-  padding-top: 5px;
+.resumeLi.active {
+  background-color: #007bff;
+  /* Background color for active state */
+  color: white;
+  /* Text color for active state */
 }
 
-/* Tab list styling */
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  cursor: pointer;
-  padding: 10px 20px;
-  text-align: center;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s, border-bottom-color 0.3s;
-  border-bottom: 2px solid transparent;
-}
-
-.active-tab {
-  background-color: #1a1a1a;
-  /* Slightly lighter background for active tab */
-  color: #ff6600;
-  /* Orange color for active tab */
-  border-bottom-color: #ff6600;
-  /* Orange underline for active tab */
-}
-
-.inactive-tab {
-  background-color: #1e1e1e;
-  /* Darker background for inactive tabs */
-  color: #cccccc;
-  /* Light gray color for inactive tabs */
-}
-
-.inactive-tab:hover {
-  background-color: #333;
-  /* Lighter background on hover for inactive tabs */
-  color: #ffffff;
-  /* White color on hover */
-}
-
-/* Content styling */
-div.px-4 {
-  background-color: #222327;
-  /* Darker background for content area */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Button styling */
-/* button {
-  background-color: #ff6600;
-  Orange background
-  color: #ffffff;
-  White text
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.3s;
-} */
-
-/* button:hover {
-  background-color: #e55b00;
-  Slightly darker orange on hover
-  transform: scale(1.05);
-  Slightly enlarge button on hover
-} */
-
-button:focus {
-  outline: none;
-}
-
-
-
-/* Resume Card Styling */
-.resume-card {
-  background-color: #2b2a2a;
-  /* Card background */
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.resume-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.resume-card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #ffffff;
-  transition: color 0.3s;
-}
-
-.resume-card-title:hover {
-  color: #cccccc;
-}
-
-.resume-card-institution {
-  font-size: 0.875rem;
-  color: #aaaaaa;
-  transition: color 0.3s;
-}
-
-.resume-card-institution:hover {
-  color: #cccccc;
-}
-
-.resume-card-year {
-  font-size: 0.875rem;
-  color: #ff6600;
-  transition: color 0.3s;
-}
-
-.resume-card-year:hover {
-  color: #ff9900;
-}
-
-/* Border line styling */
-.resume-card-border {
-  border-left: 4px solid #666;
+.skillBar {
+  margin-bottom: 15px;
+  /* Margin for each skill bar */
 }

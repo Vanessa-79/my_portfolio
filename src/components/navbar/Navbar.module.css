@@ -30,3 +30,34 @@ ul li a.active::after {
     /* Line below the text */
     transform: scaleX(1);
 }
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .bg-bodyColor {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .text-gray-400 {
+    color: #cccccc;
+}
+
+.dark-mode .border-b-gray-600 {
+    border-color: #444444;
+}
+
+.dark-mode .bg-gray-900 {
+    background-color: #121212;
+}
+
+.dark-mode .text-white {
+    color: #ffffff;
+}
+
+.dark-mode .text-designColor {
+    color: #ff6347;
+    /* or any color you define as designColor */
+}

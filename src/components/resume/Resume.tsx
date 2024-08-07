@@ -1,87 +1,67 @@
 import React, { useState } from "react";
 import Title from "../layouts/Title";
+import Education from "./Education";
+import Skills from "./Skills";
 import "./Resume.css";
-import Education from "../resume/Education";
-import Skills from "../resume/Skills";
-// import Achievements from "../resume/Achievements";
-// import Experience from "../resume/Experience";
 
 const Resume = () => {
-  const [educationData, setEducationData] = useState(true);
-  const [skillData, setSkillsData] = useState(false);
-  const [experienceData, setExperienceData] = useState(false);
-  const [achieveData, setAchievementsData] = useState(false);
+  const [educationData, setEducationData] = useState(false);
+  const [skillData, setSkillData] = useState(true);
+
+  // Function to handle tab clicks
+  const handleTabClick = (tab: string) => {
+    setEducationData(tab === "education");
+    setSkillData(tab === "skills");
+  };
 
   return (
     <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
-      <div className="flex justify-center items-center text-center">
-        <Title title="MY EXPERIENCE" des="My Resume" />
+      <div className="flex justify-center items-center text-center mb-10">
+        <Title title="MY RESUME" des="" />
       </div>
-      <div className="mt-10 flex flex-col items-center">
-        <ul className="w-full flex justify-center items-center space-x-4 border-b-2 border-gray-600 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-          <li
-            className={`transition-colors duration-300 ${
-              educationData ? "active-tab" : "inactive-tab"
-            }`}
-            onClick={() => {
-              setEducationData(true);
-              setSkillsData(false);
-              setExperienceData(false);
-              setAchievementsData(false);
-            }}
+      <div
+        className="flex flex-col items-center"
+        style={{ marginRight: "50PX", marginLeft: "50px" }}
+      >
+        <div className="w-full flex justify-center mb-5">
+          <ul className="flex space-x-4 bg-gray-100 rounded-lg p-1">
+            <li
+              onClick={() => handleTabClick("skills")}
+              className={`${
+                skillData ? "bg-red-500 text-white" : "bg-white text-gray-800"
+              } cursor-pointer py-2 px-6 rounded-lg transition-colors duration-300 border border-gray-300`}
+              style={{ flex: "1", width: "400px" }}
+            >
+              Professional Skills
+            </li>
+            <li
+              onClick={() => handleTabClick("education")}
+              className={`${
+                educationData
+                  ? "bg-red-500 text-white"
+                  : "bg-white text-gray-800"
+              } cursor-pointer py-2 px-6 rounded-lg transition-colors duration-300 border border-gray-300`}
+              style={{ flex: "1" }}
+            >
+              Education
+            </li>
+          </ul>
+        </div>
+        <div className="flex justify-center mb-10">
+          <a
+            href="/path/to/your/resume.pdf"
+            download
+            className="bg-orange-500 text-white py-2 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-300"
           >
-            Education
-          </li>
-          <li
-            className={`transition-colors duration-300 ${
-              skillData ? "active-tab" : "inactive-tab"
-            }`}
-            onClick={() => {
-              setEducationData(false);
-              setSkillsData(true);
-              setExperienceData(false);
-              setAchievementsData(false);
-            }}
-          >
-            Professional Skills
-          </li>
-          <li
-            className={`transition-colors duration-300 ${
-              experienceData ? "active-tab" : "inactive-tab"
-            }`}
-            onClick={() => {
-              setEducationData(false);
-              setSkillsData(false);
-              setExperienceData(true);
-              setAchievementsData(false);
-            }}
-          >
-            Experience
-          </li>
-          <li
-            className={`transition-colors duration-300 ${
-              achieveData ? "active-tab" : "inactive-tab"
-            }`}
-            onClick={() => {
-              setEducationData(false);
-              setSkillsData(false);
-              setExperienceData(false);
-              setAchievementsData(true);
-            }}
-          >
-            Achievements
-          </li>
-        </ul>
-        <button className="mt-4 px-6 py-2 bg-orange-600 text-white rounded-lg shadow-md hover:bg-orange-700">
-          Download CV
-        </button>
-      </div>
-
-      <div className="mt-10 px-4">
+            Download CV
+          </a>
+        </div>
+        {skillData && (
+          <div className="w-full">
+            <Skills />
+          </div>
+        )}
         {educationData && <Education />}
-        {skillData && <Skills />}
-        {/* {experienceData && <Experience />} */}
-        {/* {achieveData && <Achievements />} */}
       </div>
     </section>
   );

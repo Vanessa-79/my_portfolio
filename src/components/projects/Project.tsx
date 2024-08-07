@@ -1,8 +1,8 @@
 import React from "react";
 import "./Project.css";
 import Title from "../layouts/Title";
-import projectOne from "../../assets/images/profile/cartoon.jpg";
-import projectTwo from "../../assets/images/profile/cartoon.jpg";
+import projectOne from "../../assets/images/daycare.png";
+import projectTwo from "../../assets/images/uplift.png";
 import projectThree from "../../assets/images/profile/cartoon.jpg";
 import ProjectCard from "../projects/ProjectCard";
 
@@ -13,10 +13,7 @@ const Project: React.FC = () => {
       className="w-full py-20 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
-        <Title
-          title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK"
-          des="My Projects"
-        />
+        <Title title="Discover My Latest Projects" des="My Projects" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
@@ -39,7 +36,7 @@ const Project: React.FC = () => {
           description="An app tailored for a specific musician, integrating features for music management and interaction."
           src={projectThree}
           status="In Progress (Python, Django, JS)"
-          githubLink="#" 
+          githubLink="#"
         />
         {/* <ProjectCard
           title="Student Attendance Management System"

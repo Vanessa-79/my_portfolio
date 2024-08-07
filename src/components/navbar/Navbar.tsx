@@ -1,13 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { FiMenu } from "react-icons/fi";
+import "./Navbar.module.css"
+import { FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { FaTwitter, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { navlinksdata } from "../../constants/index.ts";
 
 const Navbar: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
-  console.log(showMenu);
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Toggle dark mode
+  const handleToggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  // Apply dark mode class to body
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [darkMode]);
 
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
@@ -35,12 +49,20 @@ const Navbar: React.FC = () => {
           </li>
         ))}
       </ul>
-      <span
-        onClick={() => setShowMenu(!showMenu)}
-        className="text-xl mdl:hidden bg-black w-10 h-10 inline-flex items-center justify-center rounded-full text-designColor cursor-pointer"
-      >
-        <FiMenu />
-      </span>
+      <div className="flex items-center gap-4">
+        <span
+          onClick={handleToggleDarkMode}
+          className="text-xl cursor-pointer text-white"
+        >
+          {darkMode ? <FiSun /> : <FiMoon />}
+        </span>
+        <span
+          onClick={() => setShowMenu(!showMenu)}
+          className="text-xl mdl:hidden bg-black w-10 h-10 inline-flex items-center justify-center rounded-full text-designColor cursor-pointer"
+        >
+          <FiMenu />
+        </span>
+      </div>
 
       {showMenu && (
         <div className="w-[80%] h-screen absolute top-0 left-0 bg-gray-900 p-4 flex flex-col items-start">
@@ -53,10 +75,14 @@ const Navbar: React.FC = () => {
           <div className="flex flex-col items-start mt-16 gap-8">
             <img className="w-32 mb-4" src="logo" alt="Logo" />
             <p className="text-sm text-gray-400 mt-2 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              vel nisi non neque finibus faucibus. Sed euismod, ligula in semper
-              congue, velit mi consectetur nunc, at scelerisque velit nunc non
-              est.
+              Vanessa is a passionate software developer with expertise in web
+              development, graphic design, and database management. With a
+              strong background in Python, React, and Django, she excels in
+              creating dynamic and user-friendly applications. Vanessa is
+              dedicated to leveraging her skills to deliver innovative solutions
+              and drive technological advancements. Outside of coding, she
+              enjoys exploring new technologies and staying updated with
+              industry trends.
             </p>
             {navlinksdata.map(({ _id, title, link }) => (
               <Link
@@ -72,17 +98,6 @@ const Navbar: React.FC = () => {
                 {title}
               </Link>
             ))}
-            {/* <div className="flex gap-4 mt-4">
-              <span className="bannerIcon">
-                <FaFacebookF />
-              </span>
-              <span className="bannerIcon">
-                <FaTwitter />
-              </span>
-              <span className="bannerIcon">
-                <FaLinkedinIn />
-              </span>
-            </div> */}
           </div>
         </div>
       )}
