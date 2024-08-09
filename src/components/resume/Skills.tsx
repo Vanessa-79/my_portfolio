@@ -1,4 +1,4 @@
-import React from "react";
+
 import SkillBar from "./SkillBar";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css"; // Import the default styles
