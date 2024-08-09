@@ -15,7 +15,7 @@ const Contact = () => {
   const emailValidation = () => {
     return String(email)
       .toLowerCase()
-      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
+      .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -51,6 +51,17 @@ const Contact = () => {
         email,
         subject,
         message,
+      });
+      fetch("http://localhost:3000/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: username,
+          phoneNumber,
+          email,
+          subject,
+          message,
+        }),
       });
       setUsername("");
       setPhoneNumber("");

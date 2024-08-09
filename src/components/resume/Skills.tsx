@@ -1,33 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
+import SkillBar from "./SkillBar";
+import { CircularProgressbar } from "react-circular-progressbar";
 
-// Define the props type for the SkillBar component
-interface SkillBarProps {
-  skill: string;
-  percentage: number;
-}
-
-// Define the SkillBar component
-const SkillBar: React.FC<SkillBarProps> = ({ skill, percentage }) => {
-  return (
-    <div className="overflow-x-hidden">
-      <p className="text-sm uppercase font-medium text-gray-500">{skill}</p>
-      <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-        <motion.span
-          initial={{ x: "-100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-          style={{ width: `${percentage}%` }}
-        >
-          <span className="absolute -top-7 right-0 text-gray-500">
-            {percentage}%
-          </span>
-        </motion.span>
-      </span>
-    </div>
-  );
-};
 
 const Skills = () => {
   const designSkills = [
@@ -59,80 +33,53 @@ const Skills = () => {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
-    >
-      <div className="w-full lgl:w-1/2">
-        <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px] uppercase">
-            Features
-          </p>
-          <h2
-            className="text-3xl md:text-4xl font-bold text-white"
-            style={{ fontSize: "30px" }}
-          >
-            Design Skills
-          </h2>
-        </div>
-        <div className="mt-14 w-full flex flex-col gap-6">
-          {designSkills.map((skill, index) => (
-            <SkillBar
-              key={index}
-              skill={skill.skill}
-              percentage={skill.percentage}
-            />
-          ))}
-        </div>
+    <div className="w-full flex flex-row justify-between gap-32 ">
+      <div className="w-1/2 ">
+        {[
+          { title: "Design Skills", skills: designSkills },
+          { title: "Development Skills", skills: developmentSkills },
+        ].map((category, index) => (
+          <div key={index} className="mb-10">
+            <h2 className="text-xl font-semibold text-white mb-4">
+              {category.title}
+            </h2>
+            <div className="space-y-4">
+              {category.skills.map((skill, idx) => (
+                <SkillBar
+                  key={idx}
+                  skill={skill.skill}
+                  percentage={skill.percentage}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
+      <div className="w-1/2">
+        <div className="mb-10">
+          <h2 className="text-xl font-semibold text-white mb-4">Soft skills</h2>
 
-      <div className="w-full lgl:w-1/2">
-        <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px] uppercase">
-            Features
-          </p>
-          <h2
-            className="text-3xl md:text-4xl font-bold text-white"
-            style={{ fontSize: "30px" }}
-          >
-            Development Skills
-          </h2>
-        </div>
-        <div className="flex flex-col gap-6">
-          {developmentSkills.map((skill, index) => (
-            <SkillBar
-              key={index}
-              skill={skill.skill}
-              percentage={skill.percentage}
-            />
-          ))}
+          <div className="flex flex-row flex-wrap">
+            {softSkills.map((skill, idx) => (
+              <div
+                className="flex flex-col justify-between"
+                style={{ width: "200px", height: "200px" }}
+              >
+                <span className="text-nowrap" style={{}}>
+                  {skill.skill}
+                </span>
+                <CircularProgressbar
+                  key={idx}
+                  value={skill.percentage}
+                  className="flex-auto"
+                  text={`${skill.percentage}%`} //put varibales inside a whole string and use single quotes and double quotes without escaping(skill.percentage + "%")
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-
-      <div className="w-full lgl:w-1/2">
-        <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px] uppercase">
-            Features
-          </p>
-          <h2
-            className="text-3xl md:text-4xl font-bold text-white"
-            style={{ fontSize: "30px" }}
-          >
-            Soft Skills
-          </h2>
-        </div>
-        <div className="flex flex-col gap-6">
-          {softSkills.map((skill, index) => (
-            <SkillBar
-              key={index}
-              skill={skill.skill}
-              percentage={skill.percentage}
-            />
-          ))}
-        </div>
-      </div>
-    </motion.div>
+    </div>
   );
 };
 

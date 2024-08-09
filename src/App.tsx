@@ -9,6 +9,7 @@ import Resume from './components/resume/Resume';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import FooterBottom from './components/footer/FooterBottom';
+import "react-circular-progressbar/dist/styles.css";
 
 function setCookie(name: string, value: string, days:number) {
   let expires = "";
