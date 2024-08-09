@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import SkillBar from "./SkillBar";
 import { CircularProgressbar } from "react-circular-progressbar";
 
