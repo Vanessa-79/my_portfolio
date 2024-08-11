@@ -7,28 +7,27 @@ const Skills = () => {
   const designSkills = [
     { skill: "Figma", percentage: 90 },
     { skill: "Adobe Photoshop", percentage: 60 },
-    { skill: "Adobe Illustrator", percentage: 70 },
-    { skill: "Graphic Design", percentage: 85 },
+    { skill: "Adobe Illustrator", percentage: 85 },
   ];
 
   const developmentSkills = [
     { skill: "Python", percentage: 95 },
-    { skill: "Django", percentage: 70 },
-    { skill: "React", percentage: 60 },
+    { skill: "Django", percentage: 95 },
+    { skill: "React", percentage: 50 },
     { skill: "JavaScript", percentage: 30 },
     { skill: "Bootstrap", percentage: 75 },
-    { skill: "Version Control (Git)", percentage: 85 },
+    { skill: "Version Control (Git)", percentage: 80 },
     { skill: "Tailwind CSS", percentage: 65 },
     { skill: "CSS", percentage: 70 },
-    { skill: "SQL", percentage: 50 },
+    { skill: "SQL", percentage: 70 },
   ];
 
   const softSkills = [
     { skill: "Problem Solving", percentage: 90 },
-    { skill: "Teamwork", percentage: 80 },
-    { skill: "Self-Motivation", percentage: 85 },
+    { skill: "Teamwork", percentage: 100 },
+    { skill: "Self-Motivation", percentage: 100 },
     { skill: "Effective Communication", percentage: 75 },
-    { skill: "Microsoft Office Suite", percentage: 90 },
+    { skill: "Microsoft Office Suite", percentage: 95},
     { skill: "Team Collaboration Tools (Trello)", percentage: 95 },
   ];
 

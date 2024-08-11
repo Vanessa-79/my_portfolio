@@ -41,7 +41,7 @@ const Footer = () => {
         </h2>
         <ul className="flex flex-col gap-2">
           <li>
-            <span className="text-gray-400">Mukono, Seeta, Uganda</span>
+            <span className="text-gray-400">Kampala, Uganda</span>
           </li>
           <li>
             <span className="text-gray-400">

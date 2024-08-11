@@ -49,12 +49,20 @@ const Resume = () => {
         </div>
         <div className="flex justify-center mb-10">
           <a
-            href="/path/to/your/resume.pdf"
-            download
+            href="/resume.pdf" // Ensure the file name matches what you placed in the `public` folder
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-orange-500 text-white py-2 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-300"
           >
             Download CV
           </a>
+          {/* <a
+            href="resume.pdf"
+            download
+            className="bg-orange-500 text-white py-2 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-300"
+          >
+            Download CV
+          </a> */}
         </div>
         {skillData && (
           <div className="w-full">
