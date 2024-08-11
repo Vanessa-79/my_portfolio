@@ -41,7 +41,7 @@ const LeftHome = () => {
     <div className="w-full lgl:w-1/2 flex flex-col gap-10">
       <div
         className="flex flex-col gap-5"
-        style={{ marginLeft: "20px", marginRight: "60px", paddingTop: "5px" }}
+        style={{ marginLeft: "40px", marginRight: "60px", paddingTop: "5px" }}
       >
         <h4 className="text-lg font-normal text-white">WELCOME TO MY WORLD</h4>
         <h1 className="text-4xl font-bold text-white">
@@ -84,10 +84,13 @@ const LeftHome = () => {
       </div>
       <div className="flex flex-col xl:flex-row justify-between gap-6 lgl:gap-0">
         <div>
-          <h2 className="text-base uppercase font-titleFont mb-4 text-white">
+          <h2
+            className="text-base uppercase font-titleFont mb-4 text-white"
+            style={{ marginLeft: "30px" }}
+          >
             Find me In
           </h2>
-          <div className="flex gap-4">
+          <div className="flex gap-4" style={{ marginLeft: "30px" }}>
             <a
               href="https://www.facebook.com/profile.php?id=100051636019516"
               rel="noopener noreferrer"
@@ -115,10 +118,13 @@ const LeftHome = () => {
         </div>
 
         <div>
-          <h2 className="text-base uppercase font-titleFont mb-4 text-white">
+          <h2
+            className="text-base uppercase font-titleFont mb-4 text-white"
+            style={{ marginLeft: "30px" }}
+          >
             Best skill on
           </h2>
-          <div className="flex gap-4">
+          <div className="flex gap-4" style={{ marginLeft: "30px" }}>
             <span className="bannerIcon text-blue-500">
               <FaReact />
             </span>

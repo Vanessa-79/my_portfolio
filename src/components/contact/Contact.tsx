@@ -103,6 +103,13 @@ const Contact = () => {
     <section
       id="contact"
       className="w-full py-20 border-b-[1px] border-b-black"
+      style={{
+        width: "100%",
+        marginLeft: "0px",
+        marginRight: "60px",
+        paddingTop: "5px",
+        boxShadow: "0 8px 20px rgba(0, 0, 0, 0.50)", // Adding shadow
+      }}
     >
       <div className="flex justify-center items-center text-center mb-8">
         <Title

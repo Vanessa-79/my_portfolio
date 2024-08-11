@@ -5,8 +5,10 @@ import Skills from "./Skills";
 import "./Resume.css";
 
 const Resume = () => {
+
   const [educationData, setEducationData] = useState(false);
   const [skillData, setSkillData] = useState(true);
+
 
   // Function to handle tab clicks
   const handleTabClick = (tab: string) => {
@@ -14,8 +16,19 @@ const Resume = () => {
     setSkillData(tab === "skills");
   };
 
+
   return (
-    <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
+    <section
+      id="resume"
+      className="w-full py-20 border-b-[1px] border-b-black"
+      style={{
+        width: "100%",
+        marginLeft: "0px",
+        marginRight: "60px",
+        paddingTop: "5px",
+        boxShadow: "0 8px 20px rgba(0, 0, 0, 0.50)", // Adding shadow
+      }}
+    >
       <div className="flex justify-center items-center text-center mb-10">
         <Title title="MY RESUME" des="" />
       </div>

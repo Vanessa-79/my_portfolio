@@ -19,7 +19,7 @@ const SkillBar: React.FC<SkillBarProps> = ({ skill, percentage }) => {
             initial={{ width: 0, opacity: 0 }}
             animate={{ width: `${percentage}%`, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="h-full bg-gradient-to-r from-red-500 to-orange-500 rounded-md"
+            className="h-full bg-gradient-to-r from-red-900 to-orange-500 rounded-md"
           />
         </div>
       </div>

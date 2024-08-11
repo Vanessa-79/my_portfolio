@@ -18,13 +18,13 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`relative flex items-center bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform group hover:scale-105 hover:shadow-xl border-l-4 ${
-        isSelected ? "border-red-500" : "border-gray-600"
+      className={`relative flex items-center bg-navy-500 p-6 rounded-lg shadow-lg  group hover:scale-105 border-l-4 ${
+        isSelected ? "border-white-500" : "border-gray-200"
       } cursor-pointer`}
     >
       {/* Card Content */}
       <div className="w-full">
-        <h3 className="text-2xl font-semibold text-white group-hover:text-gray-400 transition-colors">
+        <h3 className="text-2xl font-semibold text-white group-hover:text-red-900 transition-colors">
           {title}
         </h3>
         <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">

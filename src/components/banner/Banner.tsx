@@ -8,14 +8,23 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="w-full pt-10 flex flex-col lgl:flex-row gap-10 xl:gap-0 items-center border-b-[1px] border-b-black"
-      style={{ marginLeft: "70px", marginRight: "60px", paddingTop: "5px" }}
+      className="w-full pt-10 flex flex-col lgl:flex-row gap-10 xl:gap-0 items-center"
+      style={{
+        width: "100%",
+        marginLeft: "0px",
+        marginRight: "60px",
+        paddingTop: "5px",
+        boxShadow: "0 8px 20px rgba(0, 0, 0, 0.50)", // Adding shadow
+      }}
     >
       <LeftHome />
-      <div className="w-full lgl:w-1/2 flex justify-center items-center relative">
-        <div className="bannerImageContainer">
+      <div
+        className="w-full lgl:w-1/2 flex justify-center items-center relative"
+        
+      >
+        <div className="bannerImageContainer" >
           <div className="bannerImageBackground"></div>
-          <img src={im3} alt="profile-img" className="bannerImage" />
+          <img src={im3} alt="profile-img" className="bannerImage"></img>
         </div>
       </div>
     </section>

@@ -79,6 +79,9 @@ const Features = () => {
     <section
       id="features"
       className="w-full h-auto pt-10 pb-10 py-20 border-b border-black"
+      style={{
+        boxShadow: "0 8px 20px rgba(0, 0, 0, 0.50)", // Shadow for the entire section
+      }}
     >
       <div className="flex justify-start items-start">
         <Title

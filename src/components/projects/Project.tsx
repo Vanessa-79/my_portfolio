@@ -11,6 +11,13 @@ const Project: React.FC = () => {
     <section
       id="projects"
       className="w-full py-20 border-b-[1px] border-b-black"
+      style={{
+        width: "100%",
+        marginLeft: "0px",
+        marginRight: "60px",
+        paddingTop: "5px",
+        boxShadow: "0 8px 20px rgba(0, 0, 0, 0.50)", // Adding shadow
+      }}
     >
       <div className="flex justify-center items-center text-center">
         <Title title="Discover My Latest Projects" des="My Projects" />
