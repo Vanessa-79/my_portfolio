@@ -4,20 +4,21 @@ const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-
-
 // Create an Express app
 const app = express();
 
 // Use body-parser to parse JSON bodies into JS objects
 app.use(bodyParser.json());
 app.use(cors());
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
 // Endpoint to receive email, subject, and data and send an email
 app.post("/send-email", async (req, res) => {
   const { email, subject, fullName, phoneNumber, message } = req.body;
 
   // Validate the request body
-  if ((!email || !subject || !fullName || !phoneNumber || !message)) {
+  if (!email || !subject || !fullName || !phoneNumber || !message) {
     return res.status(400).send("Email, subject, and data are required.");
   }
 
@@ -27,11 +28,10 @@ app.post("/send-email", async (req, res) => {
       service: "gmail",
       auth: {
         user: "nassangavanessa2@gmail.com", // Your Gmail address
-        pass: "qqja xbfb lksa jenm", // Your Gmail password (or app-specific password)
+        pass: process.env.password, // Your Gmail password (or app-specific password)
       },
     });
 
-    
     // Setup email data
     let mailOptions = {
       from: `"${fullName}" <${email}>`,

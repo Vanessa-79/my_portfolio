@@ -1,6 +1,7 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import Title from "../layouts/Title";
 import ContactLeft from "./ContactLeft";
+const api = import.meta.env.VITE_API
 
 const Contact = () => {
   const [username, setUsername] = useState("");
@@ -52,7 +53,7 @@ const Contact = () => {
         subject,
         message,
       });
-      fetch("http://localhost:3000/send-email", {
+      fetch(api+"/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

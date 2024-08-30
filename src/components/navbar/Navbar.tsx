@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import "./Navbar.module.css";
 import { FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { navlinksdata } from "../../constants/index.ts";
+import { navlinksdata } from "../../constants/index.tsx"; // Ensure correct path
 import im3 from "../../assets/images/im3.jpg"; // Import the image
 
 const Navbar: React.FC = () => {
@@ -25,56 +25,55 @@ const Navbar: React.FC = () => {
   }, [darkMode]);
 
   return (
-    <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
-      <div className="flex items-center gap-4">
-        <img src={im3} alt="Profile" className="w-10 h-10 rounded-full" />
-        <h1 className="text-white font-bold text-3xl">Vanessa</h1>
-      </div>
-      <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
-        {navlinksdata.map(({ _id, title, link }) => (
-          <li
-            className="relative text-base font-normal text-gray-400 tracking-wide cursor-pointer group"
-            key={_id}
-          >
-            <Link
-              to={link}
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={500}
-              className="relative z-10"
+    <div className="navbar-container">
+      <div className="navbar-content">
+        <div className="flex items-center gap-4">
+          <img src={im3} alt="Profile" className="w-10 h-10 rounded-full" />
+          <h1 className="text-white font-bold text-3xl">Vanessa</h1>
+        </div>
+        <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10" style={{marginLeft: "50%"}}>
+          {navlinksdata.map(({ _id, title, link, icon }) => (
+            <li
+              className="relative flex items-center gap-2 text-base font-normal text-gray-400 tracking-wide cursor-pointer group"
+              key={_id}
             >
-              {title}
-            </Link>
-            <span className="absolute left-0 right-0 bottom-0 h-[2px] bg-red-500 transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-hover:opacity-100" />
-            <span className="absolute left-0 right-0 top-0 h-[2px] bg-red-500 transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-hover:opacity-100" />
-          </li>
-        ))}
-      </ul>
-      <div className="flex items-center gap-4">
-        <span
-          onClick={handleToggleDarkMode}
-          className="text-xl cursor-pointer text-white"
-        >
-          {darkMode ? <FiSun /> : <FiMoon />}
-        </span>
-        <span
-          onClick={() => setShowMenu(!showMenu)}
-          className="text-xl mdl:hidden bg-black w-10 h-10 inline-flex items-center justify-center rounded-full text-designColor cursor-pointer"
-        >
-          <FiMenu />
-        </span>
-      </div>
-
-      {showMenu && (
-        <div className="w-[80%] h-screen absolute top-0 left-0 bg-gray-900 p-4 flex flex-col items-start">
+              <Link
+                to={link}
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                className="relative z-10 flex items-center gap-2"
+              >
+                {icon}
+                {title}
+              </Link>
+              <span className="absolute left-0 right-0 bottom-0 h-[2px] bg-red-500 transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-hover:opacity-100" />
+              <span className="absolute left-0 right-0 top-0 h-[2px] bg-red-500 transition-transform duration-300 scale-x-0 group-hover:scale-x-100 group-hover:opacity-100" />
+            </li>
+          ))}
+        </ul>
+        <div className="flex items-center gap-4">
           <span
-            onClick={() => setShowMenu(false)}
-            className="absolute top-4 right-4 text-gray-400 hover:text-designColor duration-300 text-2xl cursor-pointer"
+            onClick={handleToggleDarkMode}
+            className="text-xl cursor-pointer text-white"
           >
+            {darkMode ? <FiSun /> : <FiMoon />}
+          </span>
+          <span
+            onClick={() => setShowMenu(!showMenu)}
+            className="text-xl mdl:hidden bg-black w-10 h-10 inline-flex items-center justify-center rounded-full text-designColor cursor-pointer"
+          >
+            <FiMenu />
+          </span>
+        </div>
+      </div>
+      {showMenu && (
+        <div className="mobile-menu">
+          <span onClick={() => setShowMenu(false)} className="close-icon">
             <MdClose />
           </span>
-          <div className="flex flex-col items-start mt-16 gap-8">
+          <div className="menu-content">
             <img
               className="w-32 h-32 rounded-full mb-4"
               src={im3}
@@ -90,7 +89,7 @@ const Navbar: React.FC = () => {
               enjoys exploring new technologies and staying updated with
               industry trends.
             </p>
-            {navlinksdata.map(({ _id, title, link }) => (
+            {navlinksdata.map(({ _id, title, link, icon }) => (
               <Link
                 key={_id}
                 to={link}
@@ -99,8 +98,9 @@ const Navbar: React.FC = () => {
                 offset={-80}
                 duration={500}
                 onClick={() => setShowMenu(false)}
-                className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor transition duration-300"
+                className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor transition duration-300 flex items-center gap-2"
               >
+                {icon}
                 {title}
               </Link>
             ))}
