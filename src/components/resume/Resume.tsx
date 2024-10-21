@@ -62,7 +62,7 @@ const Resume = () => {
         </div>
         <div className="flex justify-center mb-10">
           <a
-            href="/resume.pdf" // Ensure the file name matches what you placed in the `public` folder
+            href="/myresume.pdf" // Ensure the file name matches what you placed in the `public` folder
             target="_blank"
             rel="noopener noreferrer"
             className="bg-orange-500 text-white py-2 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-300"

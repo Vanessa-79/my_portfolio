@@ -3,6 +3,7 @@ import Title from "../layouts/Title";
 import ContactLeft from "./ContactLeft";
 const api = import.meta.env.VITE_API
 
+
 const Contact = () => {
   const [username, setUsername] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -63,6 +64,8 @@ const Contact = () => {
           subject,
           message,
         }),
+
+      
       });
       setUsername("");
       setPhoneNumber("");
@@ -114,7 +117,7 @@ const Contact = () => {
     >
       <div className="flex justify-center items-center text-center mb-8">
         <Title
-          title="CONTACT"
+          title="CONTACT "
           des="GET IN TOUCH"
           titleStyle={{}} // Provide default styles or an empty object
           descriptionStyle={{}} // Provide default styles or an empty object

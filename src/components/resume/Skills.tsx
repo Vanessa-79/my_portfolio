@@ -13,12 +13,15 @@ const Skills = () => {
   const developmentSkills = [
     { skill: "Python", percentage: 80 },
     { skill: "Django", percentage: 80 },
-    { skill: "React", percentage: 40 },
-    { skill: "JavaScript", percentage: 30 },
+    { skill: "React", percentage: 80 },
+    { skill: "JavaScript", percentage: 50 },
     { skill: "Bootstrap", percentage: 75 },
     { skill: "Version Control (Git)", percentage: 80 },
+    { skill: "Containerization in Docker", percentage: 80 },
+    { skill: "CI/CD Pipeline", percentage: 80 },
+    { skill: "Cloud Infrastructure: AWS", percentage: 80 },
     { skill: "Tailwind CSS", percentage: 55 },
-    { skill: "CSS", percentage: 70 },
+    { skill: "UI/UX Design", percentage: 70 },
     { skill: "SQL", percentage: 70 },
   ];
 
@@ -57,6 +60,7 @@ const Skills = () => {
       </div>
 
       {/* Development Skills with Circular Progress Bars */}
+      {/* Development Skills with Circular Progress Bars */}
       <div className="w-full lg:w-1/2">
         <h2 className="text-xl font-semibold text-white mb-4 text-center">
           Development Skills
@@ -65,7 +69,7 @@ const Skills = () => {
           {developmentSkills.map((skill, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center w-[120px] h-[120px] mb-8 transition-transform transform hover:scale-110 hover:shadow-lg"
+              className="flex flex-col items-center w-[80px] h-[80px] mb-8 transition-transform transform hover:scale-110 hover:shadow-lg"
             >
               <div className="relative w-full h-full">
                 <CircularProgressbar
