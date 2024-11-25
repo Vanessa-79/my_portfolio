@@ -1,4 +1,3 @@
-
 import SkillBar from "./SkillBar";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css"; // Import the default styles
@@ -12,26 +11,26 @@ const Skills = () => {
 
   const developmentSkills = [
     { skill: "Python", percentage: 80 },
-    { skill: "Django", percentage: 80 },
+    { skill: "Django", percentage: 90 },
     { skill: "React", percentage: 80 },
     { skill: "JavaScript", percentage: 50 },
     { skill: "Bootstrap", percentage: 75 },
     { skill: "Version Control (Git)", percentage: 80 },
     { skill: "Containerization in Docker", percentage: 80 },
     { skill: "CI/CD Pipeline", percentage: 80 },
-    { skill: "Cloud Infrastructure: AWS", percentage: 80 },
-    { skill: "Tailwind CSS", percentage: 55 },
+    { skill: "Cloud Infrastructure: AWS", percentage: 70 },
+    { skill: "Tailwind CSS", percentage: 60 },
     { skill: "UI/UX Design", percentage: 70 },
     { skill: "SQL", percentage: 70 },
   ];
 
   const softSkills = [
-    { skill: "Problem Solving", percentage: 90 },
+    { skill: "Problem Solving", percentage: 95 },
     { skill: "Teamwork", percentage: 100 },
     { skill: "Self-Motivation", percentage: 100 },
     { skill: "Effective Communication", percentage: 75 },
-    { skill: "Microsoft Office Suite", percentage: 95},
-    { skill: "Team Collaboration Tools (Trello)", percentage: 95 },
+    { skill: "Microsoft Office Suite", percentage: 95 },
+    { skill: "Team Collaboration Tools (Trello)", percentage: 100 },
   ];
 
   return (
@@ -60,16 +59,17 @@ const Skills = () => {
       </div>
 
       {/* Development Skills with Circular Progress Bars */}
-      {/* Development Skills with Circular Progress Bars */}
       <div className="w-full lg:w-1/2">
         <h2 className="text-xl font-semibold text-white mb-4 text-center">
           Development Skills
         </h2>
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid grid-cols-4 gap-8">
+          {" "}
+          {/* 4 columns per row */}
           {developmentSkills.map((skill, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center w-[80px] h-[80px] mb-8 transition-transform transform hover:scale-110 hover:shadow-lg"
+              className="flex flex-col items-center w-[100px] h-[100px] mb-8 transition-transform transform hover:scale-110 hover:shadow-lg"
             >
               <div className="relative w-full h-full">
                 <CircularProgressbar

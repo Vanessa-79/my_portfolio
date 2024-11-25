@@ -37,31 +37,32 @@ const Features = () => {
       icon: "fas fa-code",
       title: "Web Development",
       description:
-        "I offer comprehensive web development services, including front-end and back-end development. I use modern technologies and frameworks to create responsive and user-friendly websites.",
+        "I offer comprehensive web development services, including front-end and back-end development. Skilled in using modern technologies like Python, Django, React.js, HTML, Bootstrap, and Tailwind CSS to create responsive and user-friendly websites.",
     },
+
     {
       icon: "fas fa-database",
       title: "Database Management",
       description:
-        "Offering database design, implementation, and management services to ensure your data is well-organized, secure, and accessible. Expertise in both relational and NoSQL databases.",
+        "Offering database design, implementation, and management services to ensure your data is well-organized, secure, and accessible. Expertise in both relational (PostgreSQL and MySQL) and NoSQL databases.",
+    },
+    {
+      icon: "fas fa-docker",
+      title: "Containerization with Docker",
+      description:
+        "Experienced in creating and managing Docker containers to streamline development and deployment. Proficient in Dockerfile creation, image optimization, and multi-stage builds.",
+    },
+    {
+      icon: "fas fa-sync-alt",
+      title: "CI/CD Integration",
+      description:
+        "Expert in setting up Continuous Integration and Continuous Deployment pipelines using tools like GitHub Actions. Ensure efficient, automated deployment workflows.",
     },
     {
       icon: "fas fa-paint-brush",
       title: "Graphics Design",
       description:
-        "Expert in creating visually stunning designs for various media. From logos and branding materials to business cards, flyers, and banners, I craft designs that make an impact.",
-    },
-    {
-      icon: "fas fa-pencil-ruler",
-      title: "Human-Centered Design & Wireframing",
-      description:
-        "Experienced in applying Human-Centered Design (HCD) principles to create intuitive and user-focused interfaces. I use Figma to develop detailed wireframes and interactive prototypes.",
-    },
-    {
-      icon: "fas fa-project-diagram",
-      title: "UML Diagramming",
-      description:
-        "Proficient in creating detailed UML diagrams to visually represent system architecture, design processes, and interactions.",
+        "Expert in creating visually stunning designs for various media using Adobe Illustrator. From logos and branding materials to business cards, flyers, and banners, I craft designs that make an impact.",
     },
     {
       icon: "fas fa-mobile-alt",

@@ -4,6 +4,8 @@ import Title from "../layouts/Title";
 import projectOne from "../../assets/images/daycare.png";
 import projectTwo from "../../assets/images/uplift.png";
 import projectThree from "../../assets/images/profile/cartoon.jpg";
+import projectFour from "../../assets/images/refactory.png"; 
+import projectFive from "../../assets/images/personal.png"; 
 import ProjectCard from "../projects/ProjectCard";
 
 const Project: React.FC = () => {
@@ -38,6 +40,23 @@ const Project: React.FC = () => {
           status="In Progress (Python, Django, JS)"
           githubLink="https://github.com/Vanessa-79/life-changingNew.git"
         />
+
+        <ProjectCard
+          title="Refactory Academy Project"
+          description="An innovative project focusing on advanced software engineering principles and practices, collaboratively developed during the Refactory Academy bootcamp."
+          src={projectFour}
+          status="In Progress (React JS, JavaScript, Nest JS, CYPRESS)"
+          githubLink="" // Replace with the actual link
+        />
+
+        <ProjectCard
+          title="Personal Portfolio Website"
+          description="A professional personal portfolio website showcasing my skills, projects, and services. Built with React JS, Bootstrap, and Tailwind CSS for a sleek and responsive design."
+          src={projectFive}
+          status="Completed (React JS, Bootstrap, Tailwind CSS)"
+          githubLink="https://github.com/Vanessa-79/my_portfolio.git"
+        />
+
         <ProjectCard
           title="Music App for Artist"
           description="An app tailored for a specific musician, integrating features for music management and interaction."
@@ -45,13 +64,6 @@ const Project: React.FC = () => {
           status="In Progress (Python, Django, JS)"
           githubLink="#"
         />
-        {/* <ProjectCard
-          title="Student Attendance Management System"
-          description="A system using QR codes for efficient student attendance tracking."
-          src={projectThree}
-          status="Completed (HTML, CSS, PHP, JS)"
-          githubLink="https://github.com/yourusername/student-attendance-management-system" // Replace with actual link
-        /> */}
       </div>
     </section>
   );
