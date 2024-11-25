@@ -4,8 +4,9 @@ import Title from "../layouts/Title";
 import projectOne from "../../assets/images/daycare.png";
 import projectTwo from "../../assets/images/uplift.png";
 import projectThree from "../../assets/images/profile/cartoon.jpg";
-import projectFour from "../../assets/images/refactory.png"; 
-import projectFive from "../../assets/images/personal.png"; 
+import projectFour from "../../assets/images/refactory.png";
+import projectFive from "../../assets/images/personal.png";
+import projectBeginner from "../../assets/images/cakes.png"; // Add an image for the beginner project
 import ProjectCard from "../projects/ProjectCard";
 
 const Project: React.FC = () => {
@@ -26,6 +27,16 @@ const Project: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
+        {/* New Beginner Project */}
+        <ProjectCard
+          title="My First Project (HTML & CSS)"
+          description="A simple static website built with HTML and CSS during my early days of learning web development."
+          src={projectBeginner}
+          status="Completed (HTML, CSS)"
+          githubLink="https://vanessa-79.github.io/Bakery_website/" // Replace with the actual GitHub link
+        />
+
+        {/* Existing Projects */}
         <ProjectCard
           title="Daystar Daycare Web App"
           description="A comprehensive web application for Daystar Daycare, focusing on record keeping and management."
@@ -40,7 +51,6 @@ const Project: React.FC = () => {
           status="In Progress (Python, Django, JS)"
           githubLink="https://github.com/Vanessa-79/life-changingNew.git"
         />
-
         <ProjectCard
           title="Refactory Academy Project"
           description="An innovative project focusing on advanced software engineering principles and practices, collaboratively developed during the Refactory Academy bootcamp."
@@ -48,7 +58,6 @@ const Project: React.FC = () => {
           status="In Progress (React JS, JavaScript, Nest JS, CYPRESS)"
           githubLink="" // Replace with the actual link
         />
-
         <ProjectCard
           title="Personal Portfolio Website"
           description="A professional personal portfolio website showcasing my skills, projects, and services. Built with React JS, Bootstrap, and Tailwind CSS for a sleek and responsive design."
@@ -56,7 +65,6 @@ const Project: React.FC = () => {
           status="Completed (React JS, Bootstrap, Tailwind CSS)"
           githubLink="https://github.com/Vanessa-79/my_portfolio.git"
         />
-
         <ProjectCard
           title="Music App for Artist"
           description="An app tailored for a specific musician, integrating features for music management and interaction."
