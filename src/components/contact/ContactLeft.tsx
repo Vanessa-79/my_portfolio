@@ -1,12 +1,12 @@
 // import React from "react";
-import im3 from "../../assets/images/im3.jpg";
+import img3 from "../../assets/images/img3.jpg";
 import { FaTwitter, FaFacebookF, FaWhatsapp } from "react-icons/fa"; // Importing FaWhatsapp
 
 const ContactLeft = () => {
   return (
     <div className="w-full lgl:w-[35%] bg-gradient-to-r from-[#1e2024] to-[#23272b] lgl:p-8 p-4 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
       <img
-        src={im3}
+        src={img3}
         alt="Profile"
         className="w-full h-64 object-cover rounded-lg mb-2"
       />
