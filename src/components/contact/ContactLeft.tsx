@@ -1,6 +1,6 @@
 // import React from "react";
 import img3 from "../../assets/images/img3.jpg";
-import { FaTwitter, FaFacebookF, FaWhatsapp } from "react-icons/fa"; // Importing FaWhatsapp
+import { FaTwitter, FaFacebookF, FaWhatsapp } from "react-icons/fa"; 
 
 const ContactLeft = () => {
   return (
