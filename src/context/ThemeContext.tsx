@@ -8,13 +8,14 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') === 'dark';
-    }
-    return false;
-  });
-
+const [darkMode, setDarkMode] = useState(() => {
+  if (typeof window !== "undefined") {
+    // If no theme is stored, default to dark instead of light
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme === null ? true : storedTheme === "dark";
+  }
+  return true; // Default to dark mode for SSR
+});
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
