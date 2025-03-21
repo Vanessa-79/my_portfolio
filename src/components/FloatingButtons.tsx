@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaWhatsapp, FaArrowUp } from 'react-icons/fa';
 
 const FloatingButtons = () => {
