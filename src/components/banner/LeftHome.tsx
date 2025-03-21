@@ -8,9 +8,10 @@ const LeftHome = () => {
   const [text] = useTypewriter({
     words: [
       "Software developer",
-      "Database manager",
       "Web designer",
       "Graphics designer",
+      "Fullstack developer",
+      "Database manager",
     ],
     loop: true,
     typeSpeed: 70,
@@ -59,14 +60,18 @@ const LeftHome = () => {
         </h2>
         <p className="text-lg font-normal text-gray-400 mb-2">
           I'm a passionate and dedicated software developer with a strong
-          foundation in programming languages such as Python and React, as well
-          as experience with frameworks like Django. I also have expertise in
-          front-end technologies including Bootstrap, Tailwind CSS, and graphic
-          design using Figma. I have a proven track record of building
-          high-quality, scalable, and user-friendly applications. I am always
-          eager to learn new skills and contribute to the community. Feel free
-          to reach out if you have any questions or need assistance with your
-          projects.
+          foundation in Python, React.js and Django, alongside experience in
+          CI/CD and Docker. I specialize in both front-end and back-end
+          development, utilizing technologies like Tailwind CSS, Bootstrap and
+          WordPress for building responsive, user-friendly applications.
+          Additionally, I have expertise in graphic design with Figma, Canva, Postermywall ensuring
+          seamless integration of design and functionality. I have a proven
+          track record of developing high-quality, scalable and user-centric
+          solutions while working within Agile methodologies to adapt to
+          changing requirements and deliver results efficiently. I’m always
+          excited to learn new skills and expand my knowledge in tech. If you
+          have any questions or need assistance with your projects, feel free to
+          reach out, I would love to collaborate!
           <span className="text">|</span>{" "}
           <a href="#contact" className="text-red-500 hover:underline">
             Contact me
@@ -87,10 +92,7 @@ const LeftHome = () => {
           </a>
         </p>
       </div>
-      <div
-        className="flex flex-col xl:flex-row justify-between gap-6 lgl:gap-0"
-      
-      >
+      <div className="flex flex-col xl:flex-row justify-between gap-6 lgl:gap-0">
         <div>
           <h2
             className="text-base uppercase font-titleFont mb-4 text-white"
@@ -98,7 +100,7 @@ const LeftHome = () => {
           >
             Find me In
           </h2>
-          <div className="flex gap-4" style={{ marginLeft: "30px",  }}>
+          <div className="flex gap-4" style={{ marginLeft: "30px" }}>
             <a
               href="https://www.facebook.com/profile.php?id=100051636019516"
               rel="noopener noreferrer"

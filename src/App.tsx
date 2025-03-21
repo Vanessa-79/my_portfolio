@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import "./index.css";
 import Navbar from './components/navbar/Navbar';
 import Banner from './components/banner/Banner';
@@ -9,6 +9,8 @@ import Resume from './components/resume/Resume';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import FooterBottom from './components/footer/FooterBottom';
+import FloatingButtons from './components/FloatingButtons';
+import { ThemeProvider } from './context/ThemeContext';
 import "react-circular-progressbar/dist/styles.css";
 
 function setCookie(name: string, value: string, days:number) {
@@ -20,15 +22,16 @@ function setCookie(name: string, value: string, days:number) {
   }
   document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
-function App() {
-  useEffect( () => {
-    setCookie("mycookie", "vanessa", 3)
+
+const App: React.FC = () => {
+  useEffect(() => {
+    setCookie("mycookie", "vanessa", 3);
   }, []); 
 
   return (
-    <div>
-      <div className="w-full h-auto bg-bodyColor text-lihtText ">
-        <div className='max-w-screen-xl mx-auto '>
+    <ThemeProvider>
+      <div className="w-full h-auto bg-[#ffffff] text-[#1e2024] dark:bg-[#212428] dark:text-[#c4cfde] transition-colors duration-200">
+        <div className='max-w-screen-xl mx-auto'>
           <Navbar />
         </div>
         <Banner />
@@ -38,10 +41,10 @@ function App() {
         <Contact />
         <Footer />
         <FooterBottom />
+        <FloatingButtons />
       </div>
-    </div>
+    </ThemeProvider>
   );
- 
-}
+};
 
 export default App;

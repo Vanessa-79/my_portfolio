@@ -62,7 +62,7 @@ const Features = () => {
       icon: "fas fa-paint-brush",
       title: "Graphics Design",
       description:
-        "Expert in creating visually stunning designs for various media using Adobe Illustrator. From logos and branding materials to business cards, flyers, and banners, I craft designs that make an impact.",
+        "Expert in creating visually stunning designs for various media using Adobe Illustrator, Canva. From logos and branding materials to business cards, flyers and banners, I craft designs that make an impact.",
     },
     {
       icon: "fas fa-mobile-alt",

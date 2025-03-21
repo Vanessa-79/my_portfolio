@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="w-full pt-10 flex flex-col lgl:flex-row gap-10 xl:gap-0 items-center"
+      className="w-full pt-10 flex flex-col lgl:flex-row gap-10 xl:gap-0 items-center bg-[#ffffff] dark:bg-[#212428] transition-colors duration-200"
       style={{
         width: "100%",
         marginLeft: "0px",

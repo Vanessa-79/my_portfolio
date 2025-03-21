@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: "class",
+  darkMode: 'class',
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -18,20 +18,16 @@ export default {
         bodyFont: ["Poppins", "sans-serif"],
         titleFont: ["Montserrat", "sans-serif"],
       },
-
       colors: {
         bodyColor: "#212428",
         lightText: "#c4cfde",
-        boxBg: "lnear-gradient(145deg, #1e2024, #23272b)",
+        boxBg: "linear-gradient(145deg, #1e2024, #23272b)",
         designColor: "#ff014f",
-
-        // Define dark mode colors
         darkBodyColor: "#1e2024",
         darkLightText: "#e0e0e0",
         darkBoxBg: "linear-gradient(145deg, #121212, #1e1e1e)",
         darkDesignColor: "#ff017f",
       },
-
       boxShadow: {
         shadowOne: "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
       },

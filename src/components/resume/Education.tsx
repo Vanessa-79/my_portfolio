@@ -36,9 +36,9 @@ const Education = () => {
           transition={{ duration: 0.3 }}
         >
           <ResumeCard
-            title="Currently Doing Bootcamp"
+            title="Advanced Certificate in Software Engineering (Apprenticeship)"
             institution="Refactory Academy"
-            year="2024-Present"
+            year="2024"
             onClick={() => handleCardClick(4)}
             isSelected={selectedCard === 4}
           />
