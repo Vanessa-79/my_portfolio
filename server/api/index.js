@@ -34,20 +34,11 @@ app.post("/send-email", async (req, res) => {
 
     // Setup email data
     let mailOptions = {
-      from: "nassangavanessa2@gmail.com",
+      from: `"${fullName}" <${email}>`,
       to: "nassangavanessa2@gmail.com", // List of receivers
-      subject: `${subject} - from ${fullName} (${email})`, // Include sender info in subject
-      replyTo: email, // Set reply-to as the sender's email
-      text: `From: ${fullName} (${email})\nPhone: ${phoneNumber}\n\nMessage:\n${message}`,
-      html: `
-        <h3>Contact Form Submission</h3>
-        <p><strong>From:</strong> ${fullName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phoneNumber}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <h4>Message:</h4>
-        <p>${message}</p>
-      `
+      subject: subject, // Subject line
+      text: message, // Plain text body
+      html: `<p>${message}</p>`, // HTML body
     };
 
     // Send mail with defined transport object
