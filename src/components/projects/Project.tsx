@@ -76,6 +76,7 @@ const Project: React.FC = () => {
           src={projectThree}
           status="In Progress (React JS, Tailwind CSS, Animations)"
           githubLink="https://github.com/Vanessa-79/ecommerce-website"
+          websiteLink="https://dreamwear-ecommerce-website.onrender.com/"
         />
 
         <ProjectCard
