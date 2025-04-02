@@ -56,7 +56,7 @@ const Project: React.FC = () => {
           githubLink="https://github.com/Vanessa-79/life-changingNew.git"
         />
         <ProjectCard
-          title="Refactory Academy Project"
+          title="Refactory Academy Information Management System" 
           description="An innovative project focusing on advanced software engineering principles and practices, collaboratively developed during the Refactory Academy bootcamp."
           src={projectFour}
           status="Completed (React JS, JavaScript, Nest JS, CYPRESS, Jest, CI/CD, Docker)"
@@ -74,7 +74,7 @@ const Project: React.FC = () => {
           title="Ecommerce Website"
           description="A modern fashion retail platform featuring women's nightwear, gymwear, and children's clothing with seamless shopping experience and responsive design."
           src={projectThree}
-          status="In Progress (React JS, Tailwind CSS, Animations)"
+          status="In Progress (React JS, Tailwind CSS, Animations, Django, CI/CD)"
           githubLink="https://github.com/Vanessa-79/ecommerce-website"
           websiteLink="https://dreamwear-ecommerce-website.onrender.com/"
         />
