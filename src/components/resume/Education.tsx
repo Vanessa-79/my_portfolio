@@ -97,7 +97,7 @@ const Education = () => {
         >
           <ResumeCard
             title="UCE - Uganda Certificate of Education"
-            institution="Bright Future Academy"
+            institution="Blessed High School"
             year="2014-2017"
             onClick={() => handleCardClick(1)}
             isSelected={selectedCard === 1}
