@@ -42,10 +42,22 @@ const ContactLeft = () => {
 
         <div className="flex gap-4">
           <span className="bannerIcon">
-            <FaFacebookF />
+            <a
+              href="https://www.facebook.com/profile.php?id=100051636019516"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
           </span>
           <span className="bannerIcon">
-            <FaTwitter />
+            <a
+              href="https://x.com/Vanie779"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter />
+            </a>
           </span>
           <span className="bannerIcon">
             <a

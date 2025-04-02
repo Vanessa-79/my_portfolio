@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
 // Import the required packages
 const express = require("express");
 const nodemailer = require("nodemailer");
